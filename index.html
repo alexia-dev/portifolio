@@ -970,7 +970,43 @@
             font-weight: 600;
         }
     </style>
-</head>
+<style>
+/* Neon dashboard override inspired by the approved visual */
+:root{--neon-pink:#ff4fc4;--neon-purple:#8b5cf6;--neon-blue:#4f8cff;--neon-bg:#070510;--neon-panel:rgba(18,10,34,.82);--neon-line:rgba(255,255,255,.12)}
+body{background:radial-gradient(circle at 70% 0,#2a0d4d 0,#0a0612 35%,#06040a 100%) !important;color:#f8efff}
+header{position:fixed;top:0;left:0;width:100%;background:rgba(8,4,17,.72);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,79,196,.2);box-shadow:0 8px 35px rgba(0,0,0,.35);z-index:1000}
+header .header-container{max-width:1200px}
+.logo{font-size:1.35rem;letter-spacing:.01em}
+nav a{color:#eee3f7}
+nav a:hover:after{background:linear-gradient(90deg,var(--neon-pink),var(--neon-blue))}
+.hero{min-height:100vh;height:auto;padding:130px 0 70px;background:radial-gradient(circle at 80% 25%,rgba(155,92,255,.28),transparent 30%),linear-gradient(rgba(4,2,10,.6),rgba(4,2,10,.86)),url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1600&q=80') center/cover}
+.hero-content{max-width:1000px;text-align:left}
+.hero h1{font-size:clamp(2.7rem,6vw,5rem);line-height:1.08}
+.hero h1 .typed-text{color:var(--neon-pink);text-shadow:0 0 18px rgba(255,79,196,.5)}
+.hero p{font-size:1.25rem;max-width:720px;text-shadow:none;color:#efe4f8}
+.btn{background:linear-gradient(90deg,var(--neon-pink),var(--neon-purple));border:1px solid rgba(255,255,255,.18);box-shadow:0 0 20px rgba(255,79,196,.18)}
+.btn:hover{background:linear-gradient(90deg,rgba(255,79,196,.2),rgba(139,92,246,.2));border-color:var(--neon-pink);box-shadow:0 0 28px rgba(255,79,196,.25)}
+section{padding:72px 0}
+.section-title h2{color:#ff8ddd;text-shadow:0 0 12px rgba(255,79,196,.22)}
+.skills,.experience{background:transparent}
+.skill-category,.project-card,.timeline-content,.contact-form{background:var(--neon-panel);border:1px solid var(--neon-line);box-shadow:0 12px 40px rgba(0,0,0,.25);backdrop-filter:blur(14px)}
+.project-card{border-radius:20px;overflow:hidden}
+.project-card:hover{transform:translateY(-8px);box-shadow:0 16px 42px rgba(255,79,196,.12);border-color:rgba(255,79,196,.4)}
+.project-img{height:180px;background:linear-gradient(135deg,rgba(255,79,196,.22),rgba(79,140,255,.18)),radial-gradient(circle at 20% 30%,rgba(139,92,246,.55),transparent 40%)}
+.tag{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);color:#eee4f8}
+.timeline:before{background:linear-gradient(180deg,var(--neon-pink),var(--neon-purple),var(--neon-blue))}
+.social-links a{background:linear-gradient(135deg,rgba(255,79,196,.24),rgba(139,92,246,.2));border:1px solid rgba(255,255,255,.12)}
+footer{background:#06030b;border-top:1px solid rgba(255,79,196,.15)}
+/* Dashboard cards */
+.portfolio-dashboard{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:38px auto 18px;max-width:1200px;padding:0 20px}
+.dashboard-tile{background:rgba(15,8,28,.82);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:20px;min-height:112px;transition:.25s}
+.dashboard-tile:hover{transform:translateY(-4px);border-color:rgba(255,79,196,.45);box-shadow:0 0 25px rgba(255,79,196,.1)}
+.dashboard-tile .icon{font-size:1.45rem;color:#ff63c8;margin-bottom:8px}
+.dashboard-tile strong{display:block;font-family:'Roboto Slab',serif;font-size:1.1rem}
+.dashboard-tile span{color:#bfb0ce;font-size:.82rem}
+@media(max-width:1000px){.portfolio-dashboard{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.portfolio-dashboard{grid-template-columns:1fr}.hero{padding-top:110px}.header-container{padding:14px 16px}}
+</style></head>
 <body>
     <!-- Header -->
     <header>
@@ -1017,6 +1053,14 @@
         </div>
     </section>
 
+
+    <div class="portfolio-dashboard">
+      <a class="dashboard-tile" href="projetos.html"><div class="icon"><i class="fas fa-grip"></i></div><strong>Todos os Projetos</strong><span>Ver todos →</span></a>
+      <a class="dashboard-tile" href="projetos.html#desenvolvimento"><div class="icon"><i class="fas fa-screwdriver-wrench"></i></div><strong>Em Desenvolvimento</strong><span>Projetos atuais →</span></a>
+      <a class="dashboard-tile" href="projetos.html#concluidos"><div class="icon"><i class="fas fa-circle-check"></i></div><strong>Concluídos</strong><span>Projetos finalizados →</span></a>
+      <a class="dashboard-tile" href="projetos.html#academicos"><div class="icon"><i class="fas fa-graduation-cap"></i></div><strong>Acadêmicos</strong><span>Projetos da faculdade →</span></a>
+      <a class="dashboard-tile" href="projetos.html#demos"><div class="icon"><i class="fas fa-heart"></i></div><strong>Experiências</strong><span>Explorar demos →</span></a>
+    </div>
     <!-- About Section -->
     <section id="about">
         <div class="container">
