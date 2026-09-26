@@ -1008,7 +1008,7 @@
             <h1>Aléxia Mendes</h1>
             <p>Transformando código em soluções criativas enquanto estudo Ciência da Computação</p>
             <div>
-                <a href="#projects" class="btn">Ver Projetos</a>
+                <a href="projetos.html" class="btn">Ver Projetos</a>
                 <a href="#contact" class="btn btn-outline">Contato</a>
             </div>
             <div class="scroll-down">
@@ -1084,52 +1084,55 @@
         <div class="container">
             <div class="section-title">
                 <h2>Projetos</h2>
-                <p>Projetos pessoais e acadêmicos que mostram minha evolução em desenvolvimento de software</p>
+                <p>Explore meus projetos em desenvolvimento e os projetos concluídos.</p>
+            </div>
+            <div style="text-align:center; margin-bottom:35px;">
+                <a href="projetos.html" class="btn"><i class="fas fa-flask"></i> Abrir Central de Projetos &amp; Demos</a>
             </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-img"><i class="fas fa-check-circle"></i></div>
+                <div class="project-card" onclick="window.location.href='projetos.html#instrua-demo'" style="cursor:pointer;">
+                    <div class="project-img"><i class="fas fa-paw"></i></div>
                     <div class="project-content">
                         <h3>Instrua</h3>
-                        <p>Plataforma full stack em desenvolvimento para automatizar confirmações de presença e distribuição dinâmica de instruções. O objetivo é transformar o agendamento em um fluxo completo de comunicação, com backend, banco de dados e frontend integrados.</p>
-                        <div class="project-tags"><span class="tag">Java 21</span><span class="tag">Spring Boot</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">React</span></div>
-                        <div class="project-links"><a href="https://github.com/alexia-dev/Instrua" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                        <p>Plataforma em desenvolvimento para automatizar confirmações de presença e distribuição dinâmica de instruções.</p>
+                        <div class="project-tags"><span class="tag">Java 21</span><span class="tag">Spring Boot</span><span class="tag">PostgreSQL</span><span class="tag">React</span></div>
+                        <div class="project-links"><a href="projetos.html#instrua-demo" onclick="event.stopPropagation()"><i class="fas fa-flask"></i> Testar demo</a><a href="https://github.com/alexia-dev/Instrua" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i> GitHub</a></div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='projetos.html#sifac-demo'" style="cursor:pointer;">
                     <div class="project-img"><i class="fas fa-file-invoice-dollar"></i></div>
                     <div class="project-content">
                         <h3>SIFAC — Sistema de Faturamento e Relatórios</h3>
-                        <p>Projeto em desenvolvimento para organizar e automatizar processos de faturamento e geração de relatórios. Trabalha com Excel e processamento de informações relacionadas a lotes, com foco em estruturar e automatizar o tratamento dos dados.</p>
-                        <div class="project-tags"><span class="tag">Python</span><span class="tag">KivyMD</span><span class="tag">Pandas</span><span class="tag">Openpyxl</span><span class="tag">Excel</span><span class="tag">Automação</span></div>
-                        <div class="project-links"><a href="https://github.com/alexia-dev/INTERFACE" target="_blank"><i class="fab fa-github"></i> GitHub</a><span><i class="fas fa-code-branch"></i> Em desenvolvimento</span></div>
+                        <p>Projeto em desenvolvimento para organizar e automatizar processos de faturamento e geração de relatórios.</p>
+                        <div class="project-tags"><span class="tag">Python</span><span class="tag">KivyMD</span><span class="tag">Pandas</span><span class="tag">Openpyxl</span></div>
+                        <div class="project-links"><a href="projetos.html#sifac-demo" onclick="event.stopPropagation()"><i class="fas fa-flask"></i> Testar demo</a><a href="https://github.com/alexia-dev/INTERFACE" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i> GitHub</a></div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-img"><i class="fas fa-layer-group"></i></div>
+                <div class="project-card" onclick="window.location.href='projetos.html#supertrunfo-demo'" style="cursor:pointer;">
+                    <div class="project-img"><i class="fas fa-gamepad"></i></div>
                     <div class="project-content">
                         <h3>Super Trunfo</h3>
-                        <p>Jogo de cartas desenvolvido em C# como projeto acadêmico, com cartas carregadas de JSON, interface via linha de comando, turnos, comparação de atributos, Super Trunfo e tratamento de empates.</p>
-                        <div class="project-tags"><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">JSON</span><span class="tag">POO</span></div>
-                        <div class="project-links"><a href="https://github.com/alexia-dev/SuperTrunfo" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                        <p>Jogo acadêmico em C# com cartas em JSON, turnos, comparação de atributos e lógica de empate.</p>
+                        <div class="project-tags"><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">JSON</span></div>
+                        <div class="project-links"><a href="projetos.html#supertrunfo-demo" onclick="event.stopPropagation()"><i class="fas fa-flask"></i> Testar demo</a><a href="https://github.com/alexia-dev/SuperTrunfo" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i> GitHub</a></div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='projetos.html#batalha-demo'" style="cursor:pointer;">
                     <div class="project-img"><i class="fas fa-ship"></i></div>
                     <div class="project-content">
                         <h3>Batalha Naval</h3>
-                        <p>Desafio acadêmico em C dividido em níveis de complexidade, explorando vetores, matrizes, posicionamento de navios e habilidades especiais representadas por padrões como cone, cruz e octaedro.</p>
-                        <div class="project-tags"><span class="tag">C</span><span class="tag">Matrizes</span><span class="tag">Vetores</span><span class="tag">Algoritmos</span></div>
-                        <div class="project-links"><a href="https://github.com/alexia-dev/cursos-ti-desafio-batalha-naval-BatalhaNaval" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                        <p>Projeto acadêmico em C com vetores, matrizes, posicionamento de navios e habilidades especiais.</p>
+                        <div class="project-tags"><span class="tag">C</span><span class="tag">Matrizes</span><span class="tag">Algoritmos</span></div>
+                        <div class="project-links"><a href="projetos.html#batalha-demo" onclick="event.stopPropagation()"><i class="fas fa-flask"></i> Testar demo</a><a href="https://github.com/alexia-dev/cursos-ti-desafio-batalha-naval-BatalhaNaval" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i> GitHub</a></div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='projetos.html#xadrez-demo'" style="cursor:pointer;">
                     <div class="project-img"><i class="fas fa-chess-knight"></i></div>
                     <div class="project-content">
                         <h3>Xadrez</h3>
-                        <p>Trabalho acadêmico desenvolvido em C#, criado para praticar conceitos de programação e lógica por meio de um projeto baseado no jogo de xadrez.</p>
-                        <div class="project-tags"><span class="tag">C#</span><span class="tag">Lógica</span><span class="tag">Projeto acadêmico</span></div>
-                        <div class="project-links"><a href="https://github.com/alexia-dev/Xadrez" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                        <p>Trabalho acadêmico em C# para praticar programação e lógica através do jogo de xadrez.</p>
+                        <div class="project-tags"><span class="tag">C#</span><span class="tag">Lógica</span><span class="tag">Acadêmico</span></div>
+                        <div class="project-links"><a href="projetos.html#xadrez-demo" onclick="event.stopPropagation()"><i class="fas fa-flask"></i> Testar demo</a><a href="https://github.com/alexia-dev/Xadrez" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-github"></i> GitHub</a></div>
                     </div>
                 </div>
             </div>
