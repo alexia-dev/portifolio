@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projetos | Aléxia Mendes</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#ff4fc4;--violet:#9b5cff;--blue:#5c8dff;--bg:#090611;--panel:rgba(24,15,42,.78);--text:#f9f0ff;--muted:#cfc1df;--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Poppins,sans-serif;background:radial-gradient(circle at top right,#26104a 0,#0b0712 38%,#07040c 100%);color:var(--text);min-height:100vh}a{color:inherit;text-decoration:none}.layout{display:grid;grid-template-columns:280px 1fr;min-height:100vh}.sidebar{position:sticky;top:0;height:100vh;padding:28px 20px;border-right:1px solid var(--line);background:linear-gradient(180deg,rgba(19,8,32,.94),rgba(8,5,15,.96));overflow:auto}.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.35rem;margin-bottom:32px}.fox{width:38px;height:34px;position:relative;filter:drop-shadow(0 0 7px var(--pink)) drop-shadow(0 0 14px var(--violet))}.fox:before{content:'';position:absolute;inset:4px 4px 2px;background:linear-gradient(135deg,var(--pink),var(--violet));clip-path:polygon(0 10%,25% 23%,50% 0,75% 23%,100% 10%,86% 66%,66% 100%,50% 84%,34% 100%,14% 66%)}.fox:after{content:'•  •';position:absolute;left:9px;top:10px;letter-spacing:8px;color:white;font-size:.7rem}.brand span:last-child{color:#ffd9f5}.menu-title{font-size:.72rem;letter-spacing:.12em;color:#9886aa;margin:18px 0 8px}.menu a{display:flex;align-items:center;gap:12px;padding:12px 13px;border-radius:12px;color:#ddd2e9;margin:4px 0}.menu a:hover,.menu a.active{background:linear-gradient(90deg,rgba(255,79,196,.18),rgba(92,141,255,.12));box-shadow:inset 0 0 0 1px rgba(255,79,196,.24);color:#fff}.main{padding:28px 34px 60px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:24px}.back{color:#d8c7e8;font-size:.95rem}.title{font-family:'Roboto Slab',serif;font-size:2.4rem;margin:10px 0 6px}.subtitle{color:var(--muted)}.filters{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0}.filter{background:rgba(255,255,255,.05);border:1px solid var(--line);color:#eee5f6;border-radius:999px;padding:9px 15px;cursor:pointer}.filter.active,.filter:hover{background:linear-gradient(90deg,rgba(255,79,196,.22),rgba(155,92,255,.22));border-color:rgba(255,79,196,.5)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;min-height:275px;box-shadow:0 12px 40px rgba(0,0,0,.24);backdrop-filter:blur(16px);transition:.25s}.card:hover{transform:translateY(-6px);border-color:rgba(255,79,196,.45)}.icon{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(255,79,196,.18),rgba(92,141,255,.15));color:#ff9add;font-size:1.35rem;margin-bottom:15px}.row{display:flex;justify-content:space-between;gap:10px;align-items:start}.card h2{font-family:'Roboto Slab',serif;font-size:1.35rem}.status{font-size:.72rem;padding:6px 9px;border-radius:999px;white-space:nowrap}.dev{background:rgba(255,79,196,.12);color:#ff9add;border:1px solid rgba(255,79,196,.28)}.done{background:rgba(65,220,146,.1);color:#86edbd;border:1px solid rgba(65,220,146,.28)}.card p{color:#cfc1df;margin:12px 0 16px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;margin-bottom:16px}.tag{font-size:.72rem;padding:5px 9px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#ddd3e8}.actions{display:flex;gap:9px}.btn{display:inline-flex;justify-content:center;align-items:center;gap:7px;padding:10px 13px;border-radius:10px;border:1px solid rgba(255,79,196,.35);background:linear-gradient(90deg,rgba(255,79,196,.2),rgba(155,92,255,.18));font-weight:600;font-size:.83rem;flex:1}.btn.secondary{background:transparent;border-color:var(--line);color:#ddd2e9}.section{margin-top:42px}.section h3{font-family:'Roboto Slab',serif;font-size:1.6rem;margin-bottom:15px}.demo{display:grid;grid-template-columns:1fr 1fr;gap:20px}.demo-card{background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:18px;padding:20px}.demo-card p{color:#cfc1df}.demo-screen{margin-top:15px;background:#0d0917;border:1px solid rgba(255,79,196,.18);border-radius:14px;padding:18px;min-height:155px}.demo-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.demo-button{border:none;border-radius:9px;padding:9px 12px;background:linear-gradient(90deg,#ff4fc4,#9b5cff);color:white;cursor:pointer}.output{margin-top:12px;color:#ffb3e9;font-size:.9rem;min-height:20px}.notice{margin-top:18px;padding:14px 16px;border:1px solid rgba(92,141,255,.25);background:rgba(92,141,255,.08);border-radius:12px;color:#dce6ff;font-size:.88rem}.hide{display:none}@media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{position:relative;height:auto}.main{padding:22px 16px}.demo{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <a class="brand" href="index.html"><span class="fox"></span><span>&lt;/&gt; alexiamendes</span></a>
+  <div class="menu-title">PORTFÓLIO</div>
+  <nav class="menu">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Início</a>
+    <a class="active" href="projetos.html"><i class="fa-solid fa-layer-group"></i> Projetos</a>
+    <a href="index.html#about"><i class="fa-solid fa-user"></i> Sobre mim</a>
+    <a href="index.html#experience"><i class="fa-solid fa-briefcase"></i> Experiência</a>
+    <a href="index.html#skills"><i class="fa-solid fa-gears"></i> Habilidades</a>
+    <a href="index.html#contact"><i class="fa-solid fa-envelope"></i> Contato</a>
+  </nav>
+  <div class="menu-title">PROJETOS</div>
+  <nav class="menu">
+    <a href="#desenvolvimento"><i class="fa-solid fa-screwdriver-wrench"></i> Em desenvolvimento</a>
+    <a href="#concluidos"><i class="fa-solid fa-circle-check"></i> Concluídos</a>
+    <a href="#academicos"><i class="fa-solid fa-graduation-cap"></i> Acadêmicos</a>
+    <a href="#demos"><i class="fa-solid fa-flask"></i> Demos</a>
+  </nav>
+</aside>
+
+<main class="main">
+  <div class="topbar"><a class="back" href="index.html"><i class="fa-solid fa-arrow-left"></i> Voltar ao portfólio</a><a class="btn" style="flex:0 0 auto" href="https://github.com/alexia-dev" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></div>
+  <div class="menu-title">CENTRAL DE PROJETOS</div>
+  <h1 class="title">Projetos que você pode explorar</h1>
+  <p class="subtitle">Clique em um projeto para abrir sua página, testar a demo quando disponível ou consultar o código no GitHub.</p>
+
+  <div class="filters">
+    <button class="filter active" data-filter="all">Todos</button>
+    <button class="filter" data-filter="dev">Em desenvolvimento</button>
+    <button class="filter" data-filter="done">Concluídos</button>
+    <button class="filter" data-filter="academic">Acadêmicos</button>
+  </div>
+
+  <section id="desenvolvimento">
+    <div class="grid">
+      <article class="card" data-type="dev">
+        <div class="icon"><i class="fa-solid fa-paw"></i></div>
+        <div class="row"><h2>Instrua</h2><span class="status dev">Em desenvolvimento</span></div>
+        <p>Plataforma para confirmação de presença e distribuição de instruções, com backend Java/Spring Boot e integração com banco de dados.</p>
+        <div class="tags"><span class="tag">Java 21</span><span class="tag">Spring Boot</span><span class="tag">PostgreSQL</span><span class="tag">React</span></div>
+        <div class="actions"><a class="btn" href="#instrua-demo">▶ Testar demo</a><a class="btn secondary" href="https://github.com/alexia-dev/Instrua" target="_blank">GitHub</a></div>
+      </article>
+      <article class="card" data-type="dev">
+        <div class="icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+        <div class="row"><h2>SIFAC</h2><span class="status dev">Em desenvolvimento</span></div>
+        <p>Sistema para organizar processos de faturamento e geração de relatórios, trabalhando com Excel e processamento de dados em Python.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">KivyMD</span><span class="tag">Pandas</span><span class="tag">Openpyxl</span></div>
+        <div class="actions"><a class="btn" href="#sifac-demo">▶ Testar demo</a><a class="btn secondary" href="https://github.com/alexia-dev/INTERFACE" target="_blank">GitHub</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="concluidos" class="section">
+    <h3>✓ Projetos concluídos</h3>
+    <div class="grid">
+      <article class="card" data-type="done academic">
+        <div class="icon"><i class="fa-solid fa-gamepad"></i></div>
+        <div class="row"><h2>Super Trunfo</h2><span class="status done">Concluído</span></div>
+        <p>Jogo em C# com cartas em JSON, turnos, comparação de atributos e lógica de empate.</p>
+        <div class="tags"><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">JSON</span></div>
+        <div class="actions"><a class="btn" href="#supertrunfo-demo">▶ Testar demo</a><a class="btn secondary" href="https://github.com/alexia-dev/SuperTrunfo" target="_blank">GitHub</a></div>
+      </article>
+      <article class="card" data-type="done academic">
+        <div class="icon"><i class="fa-solid fa-ship"></i></div>
+        <div class="row"><h2>Batalha Naval</h2><span class="status done">Concluído</span></div>
+        <p>Projeto acadêmico em C com vetores, matrizes, navios e habilidades especiais.</p>
+        <div class="tags"><span class="tag">C</span><span class="tag">Matrizes</span><span class="tag">Algoritmos</span></div>
+        <div class="actions"><a class="btn" href="#batalha-demo">▶ Testar demo</a><a class="btn secondary" href="https://github.com/alexia-dev/cursos-ti-desafio-batalha-naval-BatalhaNaval" target="_blank">GitHub</a></div>
+      </article>
+      <article class="card" data-type="done academic">
+        <div class="icon"><i class="fa-solid fa-chess-knight"></i></div>
+        <div class="row"><h2>Xadrez</h2><span class="status done">Concluído</span></div>
+        <p>Trabalho acadêmico em C# para praticar programação e lógica através do jogo de xadrez.</p>
+        <div class="tags"><span class="tag">C#</span><span class="tag">Lógica</span><span class="tag">Acadêmico</span></div>
+        <div class="actions"><a class="btn" href="#xadrez-demo">▶ Testar demo</a><a class="btn secondary" href="https://github.com/alexia-dev/Xadrez" target="_blank">GitHub</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="academicos" class="section">
+    <h3>🎓 Acadêmicos</h3>
+    <p class="subtitle">Projetos que demonstram fundamentos de programação, algoritmos e orientação a objetos.</p>
+  </section>
+
+  <section id="demos" class="section">
+    <h3>🧪 Demos interativas</h3>
+    <div class="demo">
+      <div class="demo-card" id="instrua-demo"><h2>Instrua — fluxo de confirmação</h2><p>Sandbox visual com dados fictícios para demonstrar o fluxo.</p><div class="demo-screen"><strong>Consulta: Endoscopia</strong><div class="demo-row"><button class="demo-button" onclick="demo('instrua','confirmar')">Confirmar presença</button><button class="demo-button" onclick="demo('instrua','cancelar')">Cancelar</button></div><div class="output" id="instrua-output"></div></div></div>
+      <div class="demo-card" id="sifac-demo"><h2>SIFAC — simulação de relatório</h2><p>Filtros e resultados fictícios para demonstrar a ideia da aplicação.</p><div class="demo-screen"><label>Período <select id="periodo"><option>Jan/2026</option><option>Fev/2026</option><option>Mar/2026</option></select></label><div class="demo-row"><button class="demo-button" onclick="gerarRelatorio()">Gerar relatório</button></div><div class="output" id="sifac-output"></div></div></div>
+      <div class="demo-card" id="supertrunfo-demo"><h2>Super Trunfo — mini partida</h2><p>Escolha um atributo da carta fictícia.</p><div class="demo-screen"><strong>Dragão — Força 87 | Defesa 91 | Velocidade 72</strong><div class="demo-row"><button class="demo-button" onclick="jogar('força')">Força</button><button class="demo-button" onclick="jogar('defesa')">Defesa</button><button class="demo-button" onclick="jogar('velocidade')">Velocidade</button></div><div class="output" id="supertrunfo-output"></div></div></div>
+      <div class="demo-card" id="batalha-demo"><h2>Batalha Naval — mini tabuleiro</h2><p>Clique em uma célula para disparar.</p><div class="demo-screen"><div id="tabuleiro" style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px"></div><div class="output" id="batalha-output"></div></div></div>
+      <div class="demo-card" id="xadrez-demo"><h2>Xadrez — mini interação</h2><p>Selecione uma peça para visualizar uma jogada de demonstração.</p><div class="demo-screen"><div class="demo-row"><button class="demo-button" onclick="demo('xadrez','peão')">♟ Peão</button><button class="demo-button" onclick="demo('xadrez','torre')">♜ Torre</button><button class="demo-button" onclick="demo('xadrez','cavalo')">♞ Cavalo</button></div><div class="output" id="xadrez-output"></div></div></div>
+    </div>
+    <div class="notice"><i class="fa-solid fa-circle-info"></i> As demonstrações deste portfólio usam dados fictícios e servem para apresentar a lógica/experiência dos projetos. O código-fonte de cada projeto permanece disponível no GitHub quando aplicável.</div>
+  </section>
+</main>
+</div>
+<script>
+const filters=document.querySelectorAll('.filter');const cards=document.querySelectorAll('.card');filters.forEach(btn=>btn.addEventListener('click',()=>{filters.forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;cards.forEach(c=>{const t=c.dataset.type||'';c.style.display=(f==='all'||t.includes(f))?'flex':'none'})}));
+function demo(project,action){const el=document.getElementById(project+'-output');const map={instrua:{confirmar:'✅ Presença confirmada! As instruções foram liberadas.',cancelar:'↩️ Cancelamento simulado. O paciente poderia reagendar.'},xadrez:{peão:'♟ Peão selecionado — demonstração de movimento vertical.',torre:'♜ Torre selecionada — demonstração de movimento em linha reta.',cavalo:'♞ Cavalo selecionado — demonstração de movimento em L.'}};el.textContent=map[project][action]||'Ação simulada.'}
+function gerarRelatorio(){const p=document.getElementById('periodo').value;document.getElementById('sifac-output').textContent='📊 '+p+': 184 procedimentos • R$ 42.580,00 faturados • 12 pendências.'}
+function jogar(a){const vals={força:87,defesa:91,velocidade:72};const cpu={força:64,defesa:79,velocidade:81};const v=vals[a],c=cpu[a];document.getElementById('supertrunfo-output').textContent=v>c?'🏆 Você venceu!':v<c?'🤖 O computador venceu.':'🤝 Empate!'}
+const board=document.getElementById('tabuleiro');for(let i=0;i<25;i++){const b=document.createElement('button');b.className='demo-button';b.style.padding='8px 0';b.textContent='·';b.onclick=()=>{b.textContent='💥';document.getElementById('batalha-output').textContent='🎯 Disparo em '+(i+1)+' — resultado simulado.'};board.appendChild(b)}
+</script>
+</body>
+</html>
