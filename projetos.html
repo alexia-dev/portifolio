@@ -110,7 +110,7 @@ body{background:radial-gradient(circle at top right,#2a0d4d 0,#0a0612 38%,#06040
     <p class="subtitle">Projetos que demonstram fundamentos de programação, algoritmos e orientação a objetos.</p>
   </section>
 
-  <section id="demos" class="section">
+  <section id="games" class="section">
     <h3>🧪 Laboratório interativo</h3>
     <p class="subtitle">Instrua e SIFAC têm apenas mockups. Os projetos acadêmicos abaixo têm experiências navegáveis inspiradas na lógica documentada em seus repositórios.</p>
 
@@ -123,42 +123,84 @@ body{background:radial-gradient(circle at top right,#2a0d4d 0,#0a0612 38%,#06040
             <div class="mock-top"><span>INSTRUA</span><small>Confirmação &amp; instruções</small></div>
             <div class="mock-body"><div class="mock-sidebar">🦊<br><span>Dashboard</span><span>Agendamentos</span><span>Pacientes</span></div><div class="mock-content"><h3>Olá! 👋</h3><p>Você tem uma consulta agendada.</p><div class="mock-card"><strong>Endoscopia</strong><small>15/10/2026 • 08:30</small><button class="demo-button" disabled>Confirmar presença</button></div></div></div>
  <script>
-document.querySelectorAll('.lab-chip').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.lab-chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');const v=b.dataset.view;document.querySelectorAll('[data-kind]').forEach(x=>x.style.display=(v==='all'||(v==='mockups'&&x.dataset.kind==='mockup')||(v==='games'&&x.dataset.kind==='game'))?'block':'none')}));
-document.querySelectorAll('.view-btn').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.mock;const base=id.replace('-phone','').replace('-desktop','');document.querySelectorAll('#'+base+'-phone,#'+base+'-desktop').forEach(x=>x.style.display='none');document.getElementById(id).style.display='block';b.parentElement.querySelectorAll('.view-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active')}));
-const shipCells=new Set(['1-1','1-2','1-3','5-4','6-4','7-4','2-7','3-7']);let shots=new Set();
-function buildNaval(){shots=new Set();const p=document.getElementById('naval-player'),t=document.getElementById('naval-target');p.innerHTML='';t.innerHTML='';for(let r=1;r<=8;r++)for(let col=1;col<=8;col++){const pc=document.createElement('button');pc.className='sq'+(shipCells.has(r+'-'+col)?' ship':'');pc.disabled=true;pc.textContent=shipCells.has(r+'-'+col)?'●':'';p.appendChild(pc);const tc=document.createElement('button');tc.className='sq';tc.onclick=()=>{const k=r+'-'+col;if(shots.has(k))return;shots.add(k);const hit=shipCells.has(k);tc.classList.add(hit?'hit':'miss');tc.textContent=hit?'✦':'×';document.getElementById('naval-status').textContent=hit?'🎯 Acertou! Continue.':'🌊 Água. Tente outra casa.'};t.appendChild(tc)}document.getElementById('naval-status').textContent='Clique em uma casa do tabuleiro de ataque.'}
-document.getElementById('naval-new')?.addEventListener('click',buildNaval);document.getElementById('naval-attack')?.addEventListener('click',()=>document.getElementById('naval-status').textContent='Escolha uma coordenada no tabuleiro de ataque.');buildNaval();
+document.querySelectorAll('.lab-chip').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.lab-chip').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const v=btn.dataset.view;
+  document.querySelectorAll('[data-kind]').forEach(el=>{
+    const show=v==='all'||(v==='mockups'&&el.dataset.kind==='mockup')||(v==='games'&&el.dataset.kind==='game');
+    el.style.display=show?'block':'none';
+  });
+});
 
-const deck=[{n:'São Paulo',pop:46.65,pib:2.38,area:248.2,tur:150,den:166.23,st:true},{n:'Rio de Janeiro',pop:17.46,pib:.86,area:43.8,tur:120,den:381.87},{n:'Minas Gerais',pop:21.17,pib:.65,area:586.5,tur:90,den:35.76},{n:'Bahia',pop:14.93,pib:.31,area:564.7,tur:80,den:26.03},{n:'Paraná',pop:11.52,pib:.46,area:199.3,tur:70,den:57.85},{n:'Amazonas',pop:4.21,pib:.11,area:1559.1,tur:40,den:2.67}];
-let cpu=deck[1];
-function renderTrunfo(){const wrap=document.getElementById('my-attrs');wrap.innerHTML='';[['pop','População'],['pib','PIB'],['area','Área'],['tur','Pontos turísticos'],['den','Densidade (menor ganha)']].forEach(([k,l])=>{const b=document.createElement('button');b.className='attr-btn';b.innerHTML=l+'<b>'+deck[0][k]+'</b>';b.onclick=()=>playTrunfo(k);wrap.appendChild(b)})}
-function playTrunfo(k){const me=deck[0];let win=me.st&&!cpu.st;if(!win)win=k==='den'?me[k]<cpu[k]:me[k]>cpu[k];document.getElementById('trunfo-result').textContent=win?'🏆 Você venceu a rodada!':'🤖 O computador venceu a rodada!'}renderTrunfo();
+document.querySelectorAll('.view-btn').forEach(btn=>btn.addEventListener('click',()=>{
+  const id=btn.dataset.mock;
+  const base=id.replace(/-(phone|desktop)$/,'');
+  const phone=document.getElementById(base+'-phone');
+  const desktop=document.getElementById(base+'-desktop');
+  if(phone) phone.style.display=id.endsWith('phone')?'block':'none';
+  if(desktop) desktop.style.display=id.endsWith('desktop')?'block':'none';
+  btn.parentElement.querySelectorAll('.view-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}));
 
-const init=['♜','♞','♝','♛','♚','♝','♞','♜','♟','♟','♟','♟','♟','♟','♟','♟','','','','','','','','','','','','','','','','','♟','♟','♟','♟','♟','♟','♟','♟','♜','♞','♝','♛','♚','♝','♞','♜'];let selected=null;const cb=document.getElementById('chessboard');
-function renderChess(){cb.innerHTML='';init.forEach((p,i)=>{const s=document.createElement('button');s.className='ch '+(((Math.floor(i/8)+i)%2===0)?'l':'d');s.textContent=p;s.onclick=()=>{if(selected===null&&p){selected=i;s.classList.add('sel');document.getElementById('chess-note').textContent='Peça selecionada. Agora escolha uma casa.'}else if(selected!==null){init[i]=init[selected];init[selected]='';selected=null;document.getElementById('chess-note').textContent='Movimento visual realizado.';renderChess()}};cb.appendChild(s)})}
-document.getElementById('chess-reset')?.addEventListener('click',()=>{location.reload()});renderChess();
-</script>.',cancelar:'↩️ Cancelamento simulado. O paciente poderia reagendar.'},xadrez:{peão:'♟ Peão selecionado — demonstração de movimento vertical.',torre:'♜ Torre selecionada — demonstração de movimento em linha reta.',cavalo:'♞ Cavalo selecionado — demonstração de movimento em L.'}};el.textContent=map[project][action]||'Ação simulada.'}
-function gerarRelatorio(){const p=document.getElementById('periodo').value;document.getElementById('sifac-output').textContent='📊 '+p+': 184 procedimentos • R$ 42.580,00 faturados • 12 pendências.'}
-function jogar(a){const vals={força:87,defesa:91,velocidade:72};const cpu={força:64,defesa:79,velocidade:81};const v=vals[a],c=cpu[a];document.getElementById('supertrunfo-output').textContent=v>c?'🏆 Você venceu!':v<c?'🤖 O computador venceu.':'🤝 Empate!'}
-const board=document.getElementById('tabuleiro');for(let i=0;i<25;i++){const b=document.createElement('button');b.className='demo-button';b.style.padding='8px 0';b.textContent='·';b.onclick=()=>{b.textContent='💥';document.getElementById('batalha-output').textContent='🎯 Disparo em '+(i+1)+' — resultado simulado.'};board.appendChild(b)}
-
-// Batalha Naval demo
-const playerBoard=document.getElementById('player-board'), targetBoard=document.getElementById('target-board'), navalOutput=document.getElementById('naval-output');
-let navalShips=[2,3,3], navalShots=new Set();
+const shipCells=new Set(['1-1','1-2','1-3','5-4','6-4','7-4','2-7','3-7']);
+let shots=new Set();
 function buildNaval(){
-  playerBoard.innerHTML=''; targetBoard.innerHTML=''; navalShots=new Set();
-  const shipCells=new Set(['1-1','1-2','5-3','6-3','7-3','2-6','3-6','4-6']);
-  for(let r=1;r<=8;r++)for(let c=1;c<=8;c++){let p=document.createElement('button');p.className='cell'+(shipCells.has(r+'-'+c)?' ship':'');p.disabled=true;playerBoard.appendChild(p);
-  let t=document.createElement('button');t.className='cell';t.addEventListener('click',()=>{const k=r+'-'+c;if(navalShots.has(k))return;navalShots.add(k);const hit=shipCells.has(k);t.classList.add(hit?'hit':'miss');t.textContent=hit?'✦':'×';navalOutput.textContent=hit?'🎯 Acertou um navio!':'💨 Água. Continue procurando.'});targetBoard.appendChild(t)}
+  const p=document.getElementById('naval-player'),t=document.getElementById('naval-target'),status=document.getElementById('naval-status');
+  if(!p||!t) return;
+  p.innerHTML='';t.innerHTML='';shots=new Set();
+  for(let r=1;r<=8;r++) for(let col=1;col<=8;col++){
+    const pc=document.createElement('button'); pc.className='sq'+(shipCells.has(r+'-'+col)?' ship':''); pc.disabled=true; pc.textContent=shipCells.has(r+'-'+col)?'●':''; p.appendChild(pc);
+    const tc=document.createElement('button'); tc.className='sq';
+    tc.addEventListener('click',()=>{const k=r+'-'+col;if(shots.has(k))return;shots.add(k);const hit=shipCells.has(k);tc.classList.add(hit?'hit':'miss');tc.textContent=hit?'✦':'×';status.textContent=hit?'🎯 Acertou um navio!':'🌊 Água. Tente outra coordenada.'});
+    t.appendChild(tc);
+  }
+  status.textContent='Clique em uma casa da área de ataque.';
 }
-document.getElementById('new-naval')?.addEventListener('click',()=>{buildNaval();navalOutput.textContent='Novo jogo iniciado.'});document.getElementById('attack-btn')?.addEventListener('click',()=>navalOutput.textContent='Clique em uma célula do tabuleiro ALVO para atacar.');buildNaval();
+document.getElementById('naval-new')?.addEventListener('click',buildNaval);
+document.getElementById('naval-attack')?.addEventListener('click',()=>{const s=document.getElementById('naval-status');if(s)s.textContent='Clique em uma célula da área de ataque para disparar.'});
+buildNaval();
 
-// Super Trunfo demo based on the published C# logic
-const cards={"São Paulo":{populacao:46.65,pib:2.38,area:248.2,turismo:150,densidade:166.23,super:true},"Rio de Janeiro":{populacao:17.46,pib:.86,area:43.8,turismo:120,densidade:381.87},"Minas Gerais":{populacao:21.17,pib:.65,area:586.5,turismo:90,densidade:35.76},"Bahia":{populacao:14.93,pib:.31,area:564.7,turismo:80,densidade:26.03}};
-let cpuCard='Rio de Janeiro';document.querySelectorAll('.trunfo-card button[data-a]')?.forEach(b=>b.addEventListener('click',()=>{const attr=b.dataset.a, me=cards['São Paulo'], cpu=cards[cpuCard];let win=me.super&&!cpu.super; if(!win) win=attr==='densidade'?me[attr]<cpu[attr]:me[attr]>cpu[attr]; const out=document.getElementById('trunfo-output');out.textContent=win?'🏆 Você venceu a rodada!':'🤖 O computador venceu a rodada!';}));
+const deck=[
+ {n:'São Paulo',pop:46.65,pib:2.38,area:248.2,tur:150,den:166.23,st:true},
+ {n:'Rio de Janeiro',pop:17.46,pib:.86,area:43.8,tur:120,den:381.87},
+ {n:'Minas Gerais',pop:21.17,pib:.65,area:586.5,tur:90,den:35.76},
+ {n:'Bahia',pop:14.93,pib:.31,area:564.7,tur:80,den:26.03},
+ {n:'Paraná',pop:11.52,pib:.46,area:199.3,tur:70,den:57.85},
+ {n:'Amazonas',pop:4.21,pib:.11,area:1559.1,tur:40,den:2.67}
+];
+let cpu=deck[1];
+function renderTrunfo(){
+  const wrap=document.getElementById('my-attrs'); if(!wrap)return;
+  wrap.innerHTML='';
+  [['pop','População'],['pib','PIB'],['area','Área'],['tur','Pontos turísticos'],['den','Densidade (menor ganha)']].forEach(([k,l])=>{
+    const b=document.createElement('button'); b.className='attr-btn'; b.innerHTML=l+'<b>'+deck[0][k]+'</b>'; b.onclick=()=>playTrunfo(k); wrap.appendChild(b);
+  });
+}
+function playTrunfo(k){
+  const me=deck[0], out=document.getElementById('trunfo-result');
+  let win=me.st&&!cpu.st;
+  if(!win) win=k==='den'?me[k]<cpu[k]:me[k]>cpu[k];
+  if(out) out.textContent=win?'🏆 Você venceu a rodada!':'🤖 O computador venceu a rodada!';
+}
+renderTrunfo();
 
-// Chess visual interaction
-const chess=document.getElementById('chess-board');if(chess){const pieces=['♜','♞','♝','♛','♚','♝','♞','♜','♟','♟','♟','♟','♟','♟','♟','♟','','','','','','','','','','','','','','','','','♟','♟','♟','♟','♟','♟','♟','♟','♜','♞','♝','♛','♚','♝','♞','♜'];pieces.forEach((p,i)=>{const s=document.createElement('button');s.className='square '+(((Math.floor(i/8)+i)%2===0)?'light':'dark');s.textContent=p;s.addEventListener('click',()=>{document.querySelectorAll('.square').forEach(x=>x.classList.remove('selected'));s.classList.add('selected');document.getElementById('chess-output').textContent=p?('Peça '+p+' selecionada.'): 'Casa selecionada.'});chess.appendChild(s)})}
+const pieces=['♜','♞','♝','♛','♚','♝','♞','♜','♟','♟','♟','♟','♟','♟','♟','♟','','','','','','','','','','','','','','','','','♟','♟','♟','♟','♟','♟','♟','♟','♜','♞','♝','♛','♚','♝','♞','♜'];
+let selected=null;const cb=document.getElementById('chessboard');
+function renderChess(){
+  if(!cb)return; cb.innerHTML='';
+  pieces.forEach((p,i)=>{
+    const s=document.createElement('button'); s.className='ch '+(((Math.floor(i/8)+i)%2===0)?'l':'d'); s.textContent=p;
+    s.onclick=()=>{
+      if(selected===null&&p){selected=i;s.classList.add('sel');const n=document.getElementById('chess-note');if(n)n.textContent='Peça selecionada. Agora escolha uma casa de destino.';}
+      else if(selected!==null){pieces[i]=pieces[selected];pieces[selected]='';selected=null;const n=document.getElementById('chess-note');if(n)n.textContent='Movimento visual realizado.';renderChess();}
+    };
+    cb.appendChild(s);
+  });
+}
+document.getElementById('chess-reset')?.addEventListener('click',()=>{location.reload()});
+renderChess();
 </script>
 </body>
 </html>
