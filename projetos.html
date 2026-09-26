@@ -28,38 +28,85 @@ body{background:radial-gradient(circle at top right,#2a0d4d 0,#0a0612 38%,#06040
     <button class="lab-chip" data-view="games">Jogáveis</button>
   </div>
 
-  <section id="mockups" class="section">
-    <h3>📱 Aplicativos — mockups</h3>
-    <div class="project-hero">
-      <article class="project-hero-card" data-kind="mockup">
-        <div class="row"><h2>Instrua</h2><span class="status dev">Mockup</span></div>
-        <p>Plataforma em desenvolvimento para confirmação de presença, agenda e distribuição de instruções. A composição usa o contexto real do projeto: Java 21, Spring Boot, PostgreSQL, React e Docker.</p>
-        <div class="mobile-desktop-toggle"><button class="view-btn active" data-mock="instrua-phone">Celular</button><button class="view-btn" data-mock="instrua-desktop">Desktop</button></div>
-        <div class="mockup-stage" style="margin-top:12px">
-          <div id="instrua-phone" class="phone">
-            <div class="notch"></div><div class="screen"><div class="top"><span>🦊 Instrua</span><span>🔔</span></div><p style="margin-top:14px;color:#684777">Olá, Aléxia! Você tem uma confirmação pendente.</p><div class="card"><strong>Endoscopia</strong><small style="display:block;margin-top:5px">15/10/2026 • 08:30</small><small style="display:block">Consulmed</small><button class="cta">Confirmar presença</button><button class="cta" style="background:#efe4f4;color:#66227f;margin-top:7px">Ver instruções</button></div><div class="card"><strong>Próximo passo</strong><small style="display:block;margin-top:4px">Confirmação de identidade e orientações.</small></div></div>
-          </div>
-          <div id="instrua-desktop" class="desktop" style="display:none">
-            <div class="bar">INSTRUA • Central da clínica</div><div class="app"><div class="side"><span>🦊</span><span>Dashboard</span><span>Agendamentos</span><span>Pacientes</span><span>Instruções</span></div><div class="body"><h3>Agenda de hoje</h3><div class="panel"><b>08:30 • Endoscopia</b><br><small>Paciente: Maria da Silva • Status: aguardando confirmação</small><br><button class="action-btn" style="margin-top:9px">Enviar instruções</button></div><div class="panel"><b>Fluxo de confirmação</b><br><small>Presença → Identidade → Instruções → Atendimento</small></div></div></div>
-          </div>
-        </div>
-      </article>
+  <section id="mockups" class="section" data-section="mockups">
+<h3>📱 Produtos em desenvolvimento</h3>
+<div class="project-hero">
 
-      <article class="project-hero-card" data-kind="mockup">
-        <div class="row"><h2>SIFAC</h2><span class="status dev">Mockup</span></div>
-        <p>Sistema em desenvolvimento para faturamento e relatórios, com processamento de lotes/Excel e interface desktop baseada no projeto Python/KivyMD, Pandas e Openpyxl.</p>
-        <div class="mobile-desktop-toggle"><button class="view-btn active" data-mock="sifac-phone">Celular</button><button class="view-btn" data-mock="sifac-desktop">Desktop</button></div>
-        <div class="mockup-stage" style="margin-top:12px">
-          <div id="sifac-phone" class="phone">
-            <div class="notch"></div><div class="screen"><div class="top"><span>📊 SIFAC</span><span>⋮</span></div><p style="margin-top:14px;color:#684777">Resumo do processamento</p><div class="card"><strong>Relatório de faturamento</strong><small style="display:block;margin-top:5px">Lote: 2026-09-A</small><small style="display:block">184 registros • 12 pendências</small><button class="cta">Gerar relatório</button></div><div class="card"><strong>Histórico</strong><small style="display:block">Janeiro • Fevereiro • Março</small></div></div>
-          </div>
-          <div id="sifac-desktop" class="desktop" style="display:none">
-            <div class="bar">SIFAC • Faturamento &amp; Relatórios</div><div class="app"><div class="side"><span>📊</span><span>Dashboard</span><span>Importar lote</span><span>Relatórios</span><span>Histórico</span></div><div class="body"><h3>Processamento de lote</h3><div class="panel"><b>Arquivo selecionado:</b><br><small>lote_setembro.xlsx</small><br><button class="action-btn" style="margin-top:9px">Processar Excel</button></div><div class="panel"><b>Resultado</b><br><small>184 itens processados • 12 pendências • relatório pronto</small></div></div></div>
-          </div>
-        </div>
-      </article>
+<article class="project-hero-card" data-kind="mockup">
+  <div class="row"><h2>Instrua</h2><span class="status dev">Interativo</span></div>
+  <p>Mockup navegável inspirado nas telas do projeto: visão da clínica + visão do paciente, confirmações, agendamentos e instruções.</p>
+  <div class="instrua-tabs">
+    <button class="view-btn active" data-instrua-view="clinical">Visão da clínica</button>
+    <button class="view-btn" data-instrua-view="patient">Visão do paciente</button>
+  </div>
+
+  <div id="instrua-clinical" class="instrua-gallery">
+    <div class="phone-row">
+      <div class="phone shot"><div class="notch"></div><div class="screen">
+        <div class="top"><span>🦊 Instrua</span><span>⌁</span></div>
+        <div class="brand-lockup">Instrua</div><p class="soft">Bem-vindo(a)!</p>
+        <div class="card"><strong>Entrar</strong><small>E-mail</small><input class="fake-input" value="clinica@consulmed.com" readonly><small>Senha</small><input class="fake-input" value="••••••••" readonly><button class="cta instrua-action" data-msg="Login demonstrado — entrando na área da clínica.">Entrar</button></div>
+      </div></div>
+
+      <div class="phone shot"><div class="notch"></div><div class="screen">
+        <div class="top"><span>Olá, Aléxia!</span><span>🔔</span></div><small class="soft">Terça-feira, 23 de setembro de 2026</small>
+        <div class="mini-stats"><b>12<small>Confirmados</small></b><b>3<small>Pendentes</small></b><b>2<small>Cancelados</small></b></div>
+        <div class="card"><strong>Próximos agendamentos</strong><small>08:00 João Silva • Endoscopia</small><small>09:30 Maria Oliveira • Colonoscopia</small><button class="cta instrua-action" data-msg="Agenda aberta — mostrando os próximos atendimentos.">Ver agendamentos</button></div>
+      </div></div>
+
+      <div class="phone shot"><div class="notch"></div><div class="screen">
+        <div class="top"><span>Agendamentos</span><span>◫</span></div>
+        <div class="search-fake">⌕ Buscar paciente...</div>
+        <div class="list-item"><b>08:00</b> João Silva <span class="pill green">Confirmado</span></div>
+        <div class="list-item"><b>09:30</b> Maria Oliveira <span class="pill yellow">Pendente</span></div>
+        <div class="list-item"><b>11:00</b> Carlos Santos <span class="pill green">Confirmado</span></div>
+        <button class="cta instrua-action" data-msg="Agendamento selecionado — abrindo detalhes do paciente.">Abrir paciente</button>
+      </div></div>
+
+      <div class="phone shot"><div class="notch"></div><div class="screen">
+        <div class="top"><span>Paciente</span><span>←</span></div><div class="avatar">JS</div><h3>João Silva</h3><small class="soft">ID: 19222</small>
+        <div class="tabs-mini"><span class="active">Resumo</span><span>Instruções</span><span>Histórico</span></div>
+        <div class="card"><small>Tipo de exame</small><strong>Endoscopia</strong><small>Data e horário</small><strong>23/09/2026 às 08:00</strong><button class="cta instrua-action" data-msg="Paciente confirmado — tela de envio de instruções aberta.">Enviar instruções</button></div>
+      </div></div>
+
+      <div class="phone shot"><div class="notch"></div><div class="screen">
+        <div class="top"><span>Enviar instruções</span><span>←</span></div>
+        <div class="exam-switch"><span class="active">Endoscopia</span><span>Colonoscopia</span></div>
+        <div class="card"><strong>🧪 Preparação</strong><small>Orientações de dieta e jejum</small></div>
+        <div class="card"><strong>💊 Medicamentos</strong><small>O que suspender ou manter</small></div>
+        <div class="card"><strong>📅 Dia do exame</strong><small>O que trazer e como se preparar</small></div>
+        <button class="cta instrua-action" data-msg="Instruções enviadas para o paciente.">Enviar para o paciente</button>
+      </div></div>
     </div>
-  </section>
+  </div>
+
+  <div id="instrua-patient" class="instrua-gallery" style="display:none">
+    <div class="phone-row">
+      <div class="phone shot"><div class="notch"></div><div class="screen light-screen"><div class="brand-lockup">Instrua</div><p class="soft">Para você, paciente.</p><div class="card floral"><strong>Cuidado começa com informação.</strong><small>Confirme sua presença • Receba instruções • Acompanhe seu exame</small><button class="cta instrua-action" data-msg="Entrando na área do paciente.">Entrar</button><button class="cta pale instrua-action" data-msg="Tela de criação de conta demonstrada.">Criar conta</button></div></div></div>
+      <div class="phone shot"><div class="notch"></div><div class="screen light-screen"><div class="top"><span>Meus exames</span><span>⌁</span></div><div class="card floral"><strong>Endoscopia</strong><small>23/09/2026 às 08:00</small><span class="pill green">Presença confirmada</span><button class="cta instrua-action" data-msg="Abrindo instruções do exame.">Ver instruções</button><button class="cta pale instrua-action" data-msg="Reagendamento demonstrado.">Reagendar</button></div></div></div>
+      <div class="phone shot"><div class="notch"></div><div class="screen light-screen"><div class="top"><span>Instruções da Endoscopia</span><span>←</span></div><div class="step"><b>1</b> Antes do exame</div><div class="step"><b>2</b> No dia do exame</div><div class="step"><b>3</b> Após o exame</div><div class="card"><small>Em caso de dúvidas, entre em contato com a clínica.</small><button class="cta instrua-action" data-msg="PDF das instruções preparado para download.">Baixar em PDF</button></div></div></div>
+      <div class="phone shot"><div class="notch"></div><div class="screen light-screen"><div class="top"><span>✓ Presença confirmada!</span><span>←</span></div><div class="success-check">✓</div><h3>Seu agendamento está confirmado</h3><small class="soft">23/09/2026 às 08:00</small><button class="cta instrua-action" data-msg="Você pode abrir as instruções ou reagendar.">Ver instruções</button></div></div>
+      <div class="phone shot"><div class="notch"></div><div class="screen light-screen"><div class="top"><span>Meu perfil</span><span>←</span></div><div class="card"><strong>JS</strong><small>joao@email.com</small></div><div class="list-item light">📅 Meus exames</div><div class="list-item light">👤 Meus dados</div><div class="list-item light">🔔 Notificações</div><button class="cta pale instrua-action" data-msg="Saindo do perfil (simulação).">Sair</button></div></div>
+    </div>
+  </div>
+
+  <div id="instrua-msg" class="game-status"></div>
+</article>
+
+<article class="project-hero-card" data-kind="mockup">
+  <div class="row"><h2>SIFAC</h2><span class="status dev">Projeto em desenvolvimento</span></div>
+  <p>O SIFAC é o projeto <strong>INTERFACE</strong>: uma aplicação desktop em Python/KivyMD para organizar relatórios profissionais, processos de faturamento e dados em Excel.</p>
+  <div class="sifac-explanation">
+    <div><i class="fa-solid fa-file-invoice-dollar"></i><h3>Faturamento</h3><p>Organização e tratamento de informações de lotes e processos de faturamento.</p></div>
+    <div><i class="fa-solid fa-file-excel"></i><h3>Relatórios</h3><p>Geração e organização de relatórios financeiros, comerciais e de cobrança.</p></div>
+    <div><i class="fa-solid fa-clock-rotate-left"></i><h3>Histórico</h3><p>Seleção de períodos, histórico de relatórios e consulta organizada dos resultados.</p></div>
+    <div><i class="fa-solid fa-universal-access"></i><h3>Acessibilidade</h3><p>Interface pensada para facilitar leitura e uso, incluindo controle de tamanho da fonte.</p></div>
+  </div>
+  <div class="tech-strip"><span>Python</span><span>KivyMD</span><span>Pandas</span><span>Openpyxl</span><span>Excel</span></div>
+  <a class="btn" style="margin-top:18px" href="https://github.com/alexia-dev/INTERFACE" target="_blank"><i class="fab fa-github"></i> Ver SIFAC no GitHub</a>
+</article>
+</div>
+</section>
 
   <section id="games" class="section">
     <h3>🎓 Projetos acadêmicos — jogue aqui</h3>
@@ -208,6 +255,7 @@ body{margin:0}
 .menu a:hover,.menu a.active{background:linear-gradient(90deg,rgba(255,79,196,.18),rgba(92,141,255,.12));box-shadow:inset 0 0 0 1px rgba(255,79,196,.24);color:#fff}
 .main{padding:28px 34px 60px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:24px}
 @media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{position:relative;height:auto}.main{padding:22px 16px}}
+.instrua-tabs{display:flex;gap:8px;margin:16px 0;flex-wrap:wrap}.phone-row{display:flex;gap:14px;overflow-x:auto;padding:8px 2px 14px;scrollbar-width:thin}.phone.shot{flex:0 0 190px;width:190px;height:370px;transform:none}.phone.shot .screen{height:100%;overflow:auto}.brand-lockup{font-family:'Roboto Slab',serif;font-size:1.7rem;font-weight:700;color:#6c3ea4}.soft{color:#725680}.fake-input,.search-fake{width:100%;padding:8px;border:1px solid #dac4e5;border-radius:8px;background:#fff;margin:4px 0 8px;color:#53305f}.mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin:10px 0}.mini-stats b{background:#fff;border:1px solid #dfcae8;padding:6px;border-radius:8px;color:#5b376a}.mini-stats small{display:block;font-weight:400}.list-item{background:rgba(255,255,255,.78);border:1px solid #dcc5e6;border-radius:8px;padding:8px;margin:7px 0;color:#52305d}.list-item.light{background:#fff}.pill{display:inline-block;padding:3px 6px;border-radius:999px;font-size:.68rem}.green{background:#d4f5e4;color:#13714a}.yellow{background:#fff1c8;color:#8d6500}.avatar,.success-check{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#9a79f2,#5e8fff);color:#fff;font-weight:800;margin:8px auto}.tabs-mini,.exam-switch{display:flex;gap:4px;margin:10px 0}.tabs-mini span,.exam-switch span{flex:1;padding:6px;border-radius:8px;background:#ece0f5;font-size:.65rem;text-align:center}.tabs-mini .active,.exam-switch .active{background:#9d7df4;color:#fff}.step{padding:10px;margin:7px 0;background:#fff;border:1px solid #ddc8e8;border-radius:9px}.step b{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#a17ef0;color:#fff;margin-right:6px}.light-screen{background:linear-gradient(180deg,#fff9ff,#f3e7fa)!important}.pale{background:#eadcf3!important;color:#6a347e!important}.sifac-explanation{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.sifac-explanation>div{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);padding:16px;border-radius:13px}.sifac-explanation i{font-size:1.4rem;color:#75dff0}.sifac-explanation h3{margin:7px 0;font-size:1.05rem}.tech-strip{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.tech-strip span{padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:.76rem}@media(max-width:900px){.sifac-explanation{grid-template-columns:1fr}.phone.shot{flex-basis:180px;width:180px}}
 </style></head><body><div class="layout"><aside class="sidebar">
 <a class="brand" href="index.html"><span class="fox"></span><span>&lt;/&gt; alexiamendes</span></a>
 <div class="menu-title">PORTFÓLIO</div><nav class="menu">
@@ -262,4 +310,8 @@ document.querySelectorAll('.view-btn').forEach(b=>b.addEventListener('click',()=
 const ships=new Set(['1-1','1-2','1-3','5-4','6-4','7-4','2-7','3-7']);let shots=new Set();function buildNaval(){const p=document.getElementById('naval-player'),t=document.getElementById('naval-target');if(!p||!t)return;p.innerHTML='';t.innerHTML='';shots=new Set();for(let r=1;r<=8;r++)for(let c=1;c<=8;c++){let a=document.createElement('button');a.className='sq'+(ships.has(r+'-'+c)?' ship':'');a.disabled=true;a.textContent=ships.has(r+'-'+c)?'●':'';p.appendChild(a);let q=document.createElement('button');q.className='sq';q.onclick=()=>{let k=r+'-'+c;if(shots.has(k))return;shots.add(k);let hit=ships.has(k);q.classList.add(hit?'hit':'miss');q.textContent=hit?'✦':'×';document.getElementById('naval-status').textContent=hit?'🎯 Acertou!':'🌊 Água.'};t.appendChild(q)}document.getElementById('naval-status').textContent='Clique em uma casa do alvo.'}document.getElementById('naval-new')?.addEventListener('click',buildNaval);document.getElementById('naval-attack')?.addEventListener('click',()=>document.getElementById('naval-status').textContent='Escolha uma coordenada no alvo.');buildNaval();
 const deck=[{pop:46.65,pib:2.38,area:248.2,tur:150,den:166.23,st:true},{pop:17.46,pib:.86,area:43.8,tur:120,den:381.87}];function renderTrunfo(){let w=document.getElementById('my-attrs');[['pop','População'],['pib','PIB'],['area','Área'],['tur','Pontos turísticos'],['den','Densidade (menor ganha)']].forEach(x=>{let b=document.createElement('button');b.className='attr-btn';b.innerHTML=x[1]+'<b>'+deck[0][x[0]]+'</b>';b.onclick=()=>{let k=x[0],win=deck[0].st&&!deck[1].st;if(!win)win=k==='den'?deck[0][k]<deck[1][k]:deck[0][k]>deck[1][k];document.getElementById('trunfo-result').textContent=win?'🏆 Você venceu!':'🤖 Computador venceu!'};w.appendChild(b)})}renderTrunfo();
 const init=['♜','♞','♝','♛','♚','♝','♞','♜','♟','♟','♟','♟','♟','♟','♟','♟','','','','','','','','','','','','','','','','','♟','♟','♟','♟','♟','♟','♟','♟','♜','♞','♝','♛','♚','♝','♞','♜'];let sel=null;function drawChess(){let b=document.getElementById('chessboard');if(!b)return;b.innerHTML='';init.forEach((p,i)=>{let s=document.createElement('button');s.className='ch '+(((Math.floor(i/8)+i)%2===0)?'l':'d');s.textContent=p;s.onclick=()=>{if(sel===null&&p){sel=i;drawChess();document.getElementById('chess-note').textContent='Peça selecionada. Escolha o destino.'}else if(sel!==null){init[i]=init[sel];init[sel]='';sel=null;drawChess();document.getElementById('chess-note').textContent='Movimento visual realizado.'}};if(i===sel)s.classList.add('sel');b.appendChild(s)})}document.getElementById('chess-reset')?.addEventListener('click',()=>location.reload());drawChess();
+</script><script>
+// Instrua mockup interactions
+document.querySelectorAll('[data-instrua-view]').forEach(b=>b.addEventListener('click',()=>{const view=b.dataset.instruaView;document.getElementById('instrua-clinical').style.display=view==='clinical'?'block':'none';document.getElementById('instrua-patient').style.display=view==='patient'?'block':'none';document.querySelectorAll('[data-instrua-view]').forEach(x=>x.classList.remove('active'));b.classList.add('active')}));
+document.querySelectorAll('.instrua-action').forEach(b=>b.addEventListener('click',()=>{const box=document.getElementById('instrua-msg');box.textContent=b.dataset.msg;box.scrollIntoView({behavior:'smooth',block:'nearest'})}));
 </script></body></html>
