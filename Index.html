@@ -8,12 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --purple: #6a0dad;
-            --light-purple: #9b59b6;
-            --teal: #1abc9c;
-            --dark-teal: #16a085;
-            --light-cream: #F5F5F6;
-            --dark-charcoal: #263238;
+            --pink: #f6b6d6;
+            --pink-light: #ffd9ea;
+            --lilac: #cbb7f6;
+            --lilac-light: #eee7ff;
+            --purple: #8f5bb7;
+            --light-purple: #b99ad8;
+            --teal: #b56fb9;
+            --dark-teal: #985da0;
+            --light-cream: #fffafd;
+            --dark-charcoal: #3f3450;
+            --dark-bg: #17131f;
+            --dark-card: #241d2d;
+            --dark-text: #f8efff;
             --transition: all 0.4s ease;
         }
 
@@ -25,19 +32,62 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: var(--light-cream);
+            background: linear-gradient(135deg, var(--pink-light), var(--lilac-light));
             color: var(--dark-charcoal);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        .dark-mode {
-            background-color: #121212;
-            color: #f0f0f0;
+        body.dark-mode {
+            background: linear-gradient(135deg, #1b1522, #241c31);
+            color: var(--dark-text);
         }
 
-        .dark-mode .card, .dark-mode header, .dark-mode footer {
-            background-color: #1e1e1e;
+        body.dark-mode .skills,
+        body.dark-mode .experience {
+            background: transparent;
+        }
+
+        body.dark-mode .skill-category,
+        body.dark-mode .project-card,
+        body.dark-mode .timeline-content,
+        body.dark-mode .contact-form {
+            background: var(--dark-card);
+            color: var(--dark-text);
+        }
+
+        body.dark-mode .project-content p,
+        body.dark-mode .about-text p,
+        body.dark-mode .contact-info > p {
+            color: #eadcf4;
+        }
+
+        body.dark-mode .form-control {
+            background: #30263a;
+            color: var(--dark-text);
+            border-color: #5b466b;
+        }
+
+        body.dark-mode .section-title h2,
+        body.dark-mode .skill-category h3,
+        body.dark-mode .timeline-date {
+            color: #e8c9ff;
+        }
+
+        body.dark-mode .about-text h3,
+        body.dark-mode .project-content h3,
+        body.dark-mode .timeline-content h3,
+        body.dark-mode .contact-info h3 {
+            color: #efb9d8;
+        }
+
+        body.dark-mode .tag {
+            background: rgba(203, 183, 246, 0.16);
+            color: #e8c9ff;
+        }
+
+        body.dark-mode .about-img {
+            background: #30263a;
         }
 
         h1, h2, h3, h4 {
@@ -58,7 +108,7 @@
 
         /* Header Styles */
         header {
-            background: linear-gradient(135deg, var(--purple), var(--teal));
+            background: linear-gradient(135deg, #d98bb8, #a98bda, #b8c8f4);
             position: fixed;
             width: 100%;
             top: 0;
@@ -164,7 +214,7 @@
 
         .btn {
             display: inline-block;
-            background: var(--teal);
+            background: linear-gradient(135deg, #d99ac2, #a985d9);
             color: white;
             padding: 14px 35px;
             border-radius: 50px;
@@ -177,7 +227,7 @@
 
         .btn:hover {
             background: transparent;
-            border-color: var(--teal);
+            border-color: #b56fb9;
             transform: translateY(-5px);
         }
 
@@ -188,7 +238,7 @@
 
         .btn-outline:hover {
             background: white;
-            color: var(--purple);
+            color: #8f5bb7;
         }
 
         .scroll-down {
@@ -216,7 +266,7 @@
 
         .section-title h2 {
             font-size: 2.5rem;
-            color: var(--purple);
+            color: #8f5bb7;
             display: inline-block;
             margin-bottom: 15px;
         }
@@ -226,7 +276,7 @@
             position: absolute;
             width: 80px;
             height: 3px;
-            background: var(--light-purple);
+            background: linear-gradient(135deg, #d9a4cb, #a98bd8);
             bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
@@ -269,7 +319,7 @@
         .about-text h3 {
             font-size: 2rem;
             margin-bottom: 20px;
-            color: var(--teal);
+            color: #b56fb9;
         }
 
         .about-text p {
@@ -304,14 +354,14 @@
         .skill-category h3 {
             font-size: 1.5rem;
             margin-bottom: 25px;
-            color: var(--purple);
+            color: #8f5bb7;
             display: flex;
             align-items: center;
         }
 
         .skill-category h3 i {
             margin-right: 10px;
-            color: var(--teal);
+            color: #b56fb9;
         }
 
         .skill-item {
@@ -357,7 +407,7 @@
         }
 
         .filter-btn {
-            background: var(--light-purple);
+            background: linear-gradient(135deg, #d9a4cb, #a98bd8);
             color: white;
             border: none;
             padding: 10px 20px;
@@ -370,7 +420,7 @@
         }
 
         .filter-btn.active, .filter-btn:hover {
-            background: var(--purple);
+            background: linear-gradient(135deg, #c56fa7, #8e69c5);
         }
 
         .projects-grid {
@@ -398,7 +448,7 @@
         .project-img {
             height: 220px;
             overflow: hidden;
-            background: linear-gradient(45deg, var(--purple), var(--teal));
+            background: linear-gradient(45deg, #d98bb8, #a98bda, #b8c8f4);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -419,7 +469,7 @@
         .project-content h3 {
             font-size: 1.4rem;
             margin-bottom: 10px;
-            color: var(--teal);
+            color: #b56fb9;
         }
 
         .project-content p {
@@ -437,7 +487,7 @@
 
         .tag {
             background: rgba(154, 89, 182, 0.15);
-            color: var(--purple);
+            color: #8f5bb7;
             padding: 5px 12px;
             border-radius: 30px;
             font-size: 0.85rem;
@@ -453,14 +503,14 @@
         .project-links a {
             display: flex;
             align-items: center;
-            color: var(--teal);
+            color: #b56fb9;
             text-decoration: none;
             font-weight: 500;
             transition: var(--transition);
         }
 
         .project-links a:hover {
-            color: var(--purple);
+            color: #8f5bb7;
         }
 
         .project-links a i {
@@ -484,7 +534,7 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: var(--light-purple);
+            background: linear-gradient(135deg, #d9a4cb, #a98bd8);
             left: 50%;
             transform: translateX(-50%);
         }
@@ -518,7 +568,7 @@
             top: 30px;
             width: 20px;
             height: 20px;
-            background: var(--light-purple);
+            background: linear-gradient(135deg, #d9a4cb, #a98bd8);
             border-radius: 50%;
         }
 
@@ -532,7 +582,7 @@
 
         .timeline-date {
             display: block;
-            color: var(--purple);
+            color: #8f5bb7;
             font-weight: 600;
             margin-bottom: 10px;
         }
@@ -540,7 +590,7 @@
         .timeline-content h3 {
             font-size: 1.4rem;
             margin-bottom: 10px;
-            color: var(--teal);
+            color: #b56fb9;
         }
 
         .timeline-content h4 {
@@ -562,7 +612,7 @@
         .contact-info h3 {
             font-size: 1.8rem;
             margin-bottom: 25px;
-            color: var(--teal);
+            color: #b56fb9;
         }
 
         .contact-methods {
@@ -577,7 +627,7 @@
 
         .contact-item i {
             font-size: 1.5rem;
-            color: var(--purple);
+            color: #8f5bb7;
             margin-right: 15px;
             min-width: 30px;
         }
@@ -599,7 +649,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background: var(--light-purple);
+            background: linear-gradient(135deg, #d9a4cb, #a98bd8);
             color: white;
             font-size: 1.5rem;
             transition: var(--transition);
@@ -608,7 +658,7 @@
 
         .social-links a:hover {
             transform: translateY(-5px);
-            background: var(--purple);
+            background: linear-gradient(135deg, #c56fa7, #8e69c5);
         }
 
         .contact-form {
@@ -650,9 +700,47 @@
             resize: vertical;
         }
 
+        /* Direct Email Contact */
+        .direct-contact {
+            text-align: center;
+            min-height: 360px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .direct-contact-icon {
+            width: 72px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f2b4d2, #bda4ee);
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .direct-contact h3 {
+            color: #8f5bb7;
+            font-size: 1.7rem;
+            margin-bottom: 12px;
+        }
+
+        .direct-contact p {
+            max-width: 480px;
+            margin-bottom: 20px;
+            color: #5d5267;
+        }
+
+        body.dark-mode .direct-contact h3 { color: #efb9d8; }
+        body.dark-mode .direct-contact p { color: #eadcf4; }
+
         /* Footer */
         footer {
-            background: linear-gradient(135deg, var(--purple), var(--teal));
+            background: linear-gradient(135deg, #d98bb8, #a98bda, #b8c8f4);
             color: white;
             padding: 50px 0 20px;
             text-align: center;
@@ -699,7 +787,7 @@
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background: var(--teal);
+            background: linear-gradient(135deg, #d99ac2, #a985d9);
             color: white;
             border: none;
             cursor: pointer;
@@ -713,7 +801,7 @@
         }
 
         .theme-toggle:hover {
-            background: var(--purple);
+            background: linear-gradient(135deg, #c56fa7, #8e69c5);
             transform: translateY(-5px);
         }
 
@@ -753,7 +841,7 @@
                 right: -300px;
                 width: 300px;
                 height: 100vh;
-                background: var(--purple);
+                background: linear-gradient(135deg, #c56fa7, #8e69c5);
                 padding: 80px 30px 30px;
                 transition: var(--transition);
                 z-index: 999;
@@ -1147,7 +1235,7 @@
                             <i class="fas fa-envelope"></i>
                             <div class="contact-text">
                                 <h4>Email</h4>
-                                <p>alexiamendesassis@gmail.com</p>
+                                <p>alexiaamendesdev@outlook.com</p>
                             </div>
                         </div>
                         
@@ -1184,29 +1272,14 @@
                 </div>
                 
                 <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nome</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Assunto</label>
-                            <input type="text" id="subject" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Mensagem</label>
-                            <textarea id="message" class="form-control" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn">Enviar Mensagem</button>
-                    </form>
+                    <div class="direct-contact">
+                        <i class="fas fa-paper-plane direct-contact-icon"></i>
+                        <h3>Fale comigo por e-mail</h3>
+                        <p>Um clique e o Outlook abre uma mensagem pronta para você preencher e enviar.</p>
+                        <a class="btn" href="mailto:alexiaamendesdev@outlook.com?subject=Contato%20atrav%C3%A9s%20do%20portf%C3%B3lio%20%E2%80%94%20Al%C3%A9xia%20Mendes&body=Ol%C3%A1%2C%20Al%C3%A9xia%21%0A%0AEncontrei%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20entrar%20em%20contato%20sobre...%0A%0AAtenciosamente%2C%0A">
+                            <i class="fas fa-envelope"></i> Entrar em contato por e-mail
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1239,7 +1312,7 @@
     </footer>
 
     <!-- Theme Toggle -->
-    <button class="theme-toggle">
+    <button class="theme-toggle" type="button" aria-label="Alternar tema">
         <i class="fas fa-moon"></i>
     </button>
 
@@ -1277,38 +1350,35 @@
         
         // Theme Toggle
         const themeToggle = document.querySelector('.theme-toggle');
-        
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-            
-            themeToggle.innerHTML = isDarkMode ? 
-                '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-        });
-        
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-mode');
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+
+        function applyTheme(theme) {
+            const isDarkMode = theme === 'dark';
+            document.body.classList.toggle('dark-mode', isDarkMode);
+            themeToggle.innerHTML = isDarkMode
+                ? '<i class="fas fa-sun"></i>'
+                : '<i class="fas fa-moon"></i>';
+            themeToggle.setAttribute(
+                'aria-label',
+                isDarkMode ? 'Ativar modo claro' : 'Ativar modo escuro'
+            );
         }
-        
-        // Contact Form Submission
-        const contactForm = document.getElementById('contactForm');
-        
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Form validation would go here
-            // In a real application, you would send the form data to a server
-            
-            // Show success message
-            alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
-            contactForm.reset();
+
+        themeToggle.addEventListener('click', () => {
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            const nextTheme = isDarkMode ? 'light' : 'dark';
+            localStorage.setItem('theme', nextTheme);
+            applyTheme(nextTheme);
         });
-        
+
+        // Load saved theme or follow system preference
+        const savedTheme = localStorage.getItem('theme');
+        const preferredTheme = savedTheme || (
+            window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        );
+        applyTheme(preferredTheme);
+
+        // The contact card uses a direct mailto link, so no form handler is necessary.
+
         // Typed Text Effect
         const typedTextSpan = document.querySelector('.typed-text');
         const textArray = ['Desenvolvedora Full-Stack', 'Estudante de Ciência da Computação', 'Programadora Python', 'Entusiasta de Tecnologia'];
