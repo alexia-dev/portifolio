@@ -1,103 +1,87 @@
 # Portfólio — Aléxia Mendes
 
-Portfólio pessoal de **Aléxia Mendes**, estudante de Ciência da Computação e desenvolvedora em formação.
+Portfólio profissional de **Aléxia Mendes**, estudante de Ciência da Computação com foco em desenvolvimento de software, especialmente **Backend com Java e Spring Boot**, e evolução para Full Stack.
 
-O projeto apresenta uma visão profissional da trajetória, habilidades, projetos, formação e canais de contato, com foco em uma experiência visual moderna, responsiva e simples de navegar.
+O conteúdo profissional deste portfólio foi atualizado com base no currículo Master ATS 2026 e nos projetos públicos do GitHub.
 
-## ✨ Destaques
+## 👩‍💻 Perfil
 
-- Design responsivo para desktop e dispositivos móveis
-- Paleta visual em degradê de **rosa claro → lilás**
-- Modo claro e **Dark Mode**
-- Preferência de tema salva no navegador com `localStorage`
-- Navegação suave entre seções
+- Ciência da Computação — Estácio de Sá (2024 – Atual)
+- Foco: Desenvolvimento Backend / Java / Spring Boot
+- Objetivo: estágio, trainee ou posição inicial em Tecnologia
+- Áreas de interesse: Backend, Full Stack, QA/Testes, Suporte Técnico, Dados e Automação
+- Disponibilidade: presencial, híbrida ou remota
+- Inglês: C1 — Avançado, certificado EF SET
+- E-mail profissional: alexiaamendesdev@outlook.com
+
+## 💼 Experiência
+
+### Recepcionista Clínica | Suporte Administrativo e T.I. — Consulmed
+**Fev/2024 – Atual**
+
+Atendimento presencial, telefônico e digital; gestão de agendas e confirmações; organização de exames e informações; suporte a rotinas administrativas e sistemas internos; apoio em faturamento, conferência de convênios, documentação e controle de processos; suporte operacional a sistemas e equipamentos; organização de fluxos, resolução de problemas e criação de materiais de comunicação.
+
+### Atendente de Telemarketing — Legião da Boa Vontade (LBV)
+**Ago/2023 – Nov/2023**
+
+Atendimento, comunicação, prospecção, negociação e cumprimento de metas.
+
+## 🛠️ Competências
+
+**Backend:** Java 21, Spring Boot, Spring Data JPA, APIs REST, Maven, Flyway  
+**Banco de Dados:** PostgreSQL, SQL, modelagem relacional  
+**Desenvolvimento:** Python, JavaScript, HTML5, CSS3, C# e C  
+**Ferramentas:** Git, GitHub, Docker, VS Code e IntelliJ IDEA  
+**Conceitos:** POO, Arquitetura em Camadas, Clean Code e API Design  
+**Em aperfeiçoamento:** React, TypeScript, Next.js, Spring Security, JWT, JUnit, Mockito, AWS e Kafka
+
+## 🚀 Projetos
+
+### Instrua
+Plataforma full stack em desenvolvimento para automatizar confirmações de presença e distribuição dinâmica de instruções. O projeto utiliza Java 21, Spring Boot, PostgreSQL, REST APIs, Spring Data JPA, Flyway, Maven e Docker, com frontend React em evolução.
+
+### SIFAC
+Sistema de Faturamento e Relatórios em desenvolvimento, voltado à organização de processos de faturamento e geração/organização de relatórios, utilizando Excel e processamento de informações relacionadas a lotes.
+
+### Sistema de Gestão de Relatórios
+Aplicação desktop em Python para geração de relatórios profissionais em Excel, incluindo relatórios financeiros, comerciais e de cobrança, seleção de períodos, histórico e interface acessível. Tecnologias: Python, KivyMD, Pandas e Openpyxl.
+
+### Super Trunfo
+Jogo de cartas em C# com carregamento de cartas via JSON, interface de linha de comando, turnos, comparação de atributos, Super Trunfo e tratamento de empates.
+
+### Batalha Naval
+Projeto acadêmico em C que explora vetores, matrizes, posicionamento de navios e habilidades especiais com padrões de cone, cruz e octaedro.
+
+### Xadrez
+Trabalho acadêmico desenvolvido em C# para praticar programação e lógica por meio de um projeto baseado no jogo de xadrez.
+
+## 🎨 Sobre o site
+
+- HTML5
+- CSS3
+- JavaScript
+- Design responsivo
+- Gradiente rosa claro → lilás
+- Dark Mode com persistência via `localStorage`
+- Navegação suave
 - Menu mobile
-- Efeito de texto digitado na seção inicial
-- Cards de habilidades e projetos
-- Linha do tempo de formação
-- Contato direto por e-mail usando `mailto:`
-- Links para GitHub, LinkedIn e Instagram
+- Efeito de texto digitado
+- Links diretos para os projetos no GitHub
+- Contato via `mailto:` direcionado ao Outlook
 
-## 🗂️ Estrutura do projeto
+## 📂 Estrutura
 
 ```text
-portfolio/
-├── Index.html
+portifolio/
+├── index.html
 ├── 1725635186385.jpeg
 ├── README.md
 └── .gitattributes
 ```
 
-### `Index.html`
+## 🌐 Publicação
 
-Arquivo principal do site.
-
-O HTML contém a estrutura completa da página e, no projeto atual, também reúne os estilos CSS e os scripts JavaScript para manter a publicação simples, sem dependências de build.
-
-### `1725635186385.jpeg`
-
-Imagem utilizada como recurso visual do portfólio.
-
-### `.gitattributes`
-
-Configura atributos do Git para os arquivos do projeto.
-
-## 🎨 Tecnologias
-
-- **HTML5** — estrutura semântica da página
-- **CSS3** — layout, responsividade, animações, gradientes e Dark Mode
-- **JavaScript** — interações da interface e persistência do tema
-- **Font Awesome** — ícones
-- **Google Fonts** — tipografia
-- **Git/GitHub** — versionamento e publicação
-
-## 🌙 Como funciona o Dark Mode
-
-O botão de tema alterna entre os modos claro e escuro.
-
-A escolha é armazenada no navegador:
-
-`localStorage.setItem('theme', 'dark')`
-
-Ao abrir o site novamente, a preferência salva é recuperada. Quando não existe uma escolha anterior, o site pode seguir a preferência de tema do sistema operacional.
-
-## ✉️ Contato
-
-O botão de contato usa um link `mailto:` direcionado para:
-
-**alexiaamendesdev@outlook.com**
-
-O assunto e uma mensagem inicial já são preenchidos automaticamente para reduzir o número de etapas para quem deseja entrar em contato.
-
-> Observação: o `mailto:` abre o cliente de e-mail configurado no dispositivo. O site não envia mensagens por conta própria nem armazena mensagens de visitantes.
-
-## 🚀 Executando localmente
-
-Como o projeto é estático, não é necessário instalar Node.js, Java ou outro servidor para visualizar a versão básica.
-
-Basta abrir:
-
-```text
-Index.html
-```
-
-Para desenvolvimento, recomenda-se usar a extensão **Live Server** no VS Code ou outro servidor HTTP local.
-
-## 📦 Publicação
-
-O projeto pode ser publicado como site estático, inclusive pelo **GitHub Pages**.
-
-## 🧩 Manutenção futura
-
-Melhorias planejadas podem incluir:
-
-- Separação do CSS e JavaScript em arquivos próprios
-- Componentização da interface
-- Melhorias de acessibilidade
-- SEO e metadados sociais
-- Otimização de imagens
-- Inclusão automática de projetos públicos do GitHub
-- Testes de acessibilidade e performance
+Este projeto pode ser publicado como site estático pelo GitHub Pages.
 
 ## 👩‍💻 Autora
 
@@ -105,8 +89,4 @@ Melhorias planejadas podem incluir:
 
 - GitHub: https://github.com/alexia-dev
 - LinkedIn: https://www.linkedin.com/in/alexiaamendes/
-- E-mail: alexiaamendesdev@outlook.com
-
----
-
-> Portfólio pessoal desenvolvido para apresentar projetos, competências e evolução profissional em tecnologia.
+- E-mail profissional: alexiaamendesdev@outlook.com
