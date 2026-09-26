@@ -135,6 +135,49 @@
             color: #ffd700;
         }
 
+        .fox-logo {
+            position: relative;
+            width: 38px;
+            height: 32px;
+            margin-right: 10px;
+            filter: drop-shadow(0 0 5px #ff4fc4) drop-shadow(0 0 11px #a855f7);
+            flex: 0 0 auto;
+        }
+
+        .fox-logo .fox-face {
+            position: absolute;
+            left: 5px;
+            top: 7px;
+            width: 28px;
+            height: 22px;
+            background: linear-gradient(135deg, #ff4fc4 0%, #ff7ad9 42%, #a855f7 100%);
+            clip-path: polygon(0 8%, 24% 22%, 50% 4%, 76% 22%, 100% 8%, 86% 68%, 66% 100%, 50% 83%, 34% 100%, 14% 68%);
+            box-shadow: 0 0 10px rgba(255,79,196,.8);
+        }
+
+        .fox-logo .fox-muzzle {
+            position: absolute;
+            left: 14px;
+            top: 17px;
+            width: 10px;
+            height: 7px;
+            background: #fff0fb;
+            clip-path: polygon(50% 0, 100% 35%, 68% 100%, 32% 100%, 0 35%);
+        }
+
+        .fox-logo .fox-eye {
+            position: absolute;
+            top: 14px;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 0 6px #fff;
+        }
+
+        .fox-logo .fox-eye.left { left: 12px; }
+        .fox-logo .fox-eye.right { right: 12px; }
+
         nav ul {
             display: flex;
             list-style: none;
@@ -932,9 +975,15 @@
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <div class="logo">
-                <i class="fas fa-code"></i> Aléxia<span>Mendes</span>
-            </div>
+            <a class="logo" href="#home" aria-label="alexiamendes — início">
+                <span class="fox-logo" aria-hidden="true">
+                    <span class="fox-face"></span>
+                    <span class="fox-muzzle"></span>
+                    <span class="fox-eye left"></span>
+                    <span class="fox-eye right"></span>
+                </span>
+                <span style="color:#ffffff;">&lt;/&gt;</span><span style="color:#ffd7f4; margin-left:2px;">alexiamendes</span>
+            </a>
             
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -1184,7 +1233,13 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <i class="fas fa-code"></i> Aléxia Mendes
+                    <span style="display:inline-flex;align-items:center;gap:8px;">
+                        <span class="fox-logo" aria-hidden="true">
+                            <span class="fox-face"></span><span class="fox-muzzle"></span>
+                            <span class="fox-eye left"></span><span class="fox-eye right"></span>
+                        </span>
+                        &lt;/&gt; alexiamendes
+                    </span>
                 </div>
                 
                 <p>Transformando código em soluções criativas</p>
