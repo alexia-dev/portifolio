@@ -40,10 +40,10 @@ Atendimento, comunicação, prospecção, negociação e cumprimento de metas.
 ### Instrua
 Plataforma full stack em desenvolvimento para automatizar confirmações de presença e distribuição dinâmica de instruções. O projeto utiliza Java 21, Spring Boot, PostgreSQL, REST APIs, Spring Data JPA, Flyway, Maven e Docker, com frontend React em evolução.
 
-### SIFAC
-Sistema de Faturamento e Relatórios em desenvolvimento, voltado à organização de processos de faturamento e geração/organização de relatórios, utilizando Excel e processamento de informações relacionadas a lotes.
+### NEXA / Nexa Bill
+Plataforma de gestão para clínicas em desenvolvimento, organizada em módulos. O **Instrua** cuida da jornada clínica; o **Nexa Bill** concentra faturamento, lotes, guias, protocolos e relatórios.
 
-### Sistema de Gestão de Relatórios
+### Projetos acadêmicos e demais projetos
 Aplicação desktop em Python para geração de relatórios profissionais em Excel, incluindo relatórios financeiros, comerciais e de cobrança, seleção de períodos, histórico e interface acessível. Tecnologias: Python, KivyMD, Pandas e Openpyxl.
 
 ### Super Trunfo
