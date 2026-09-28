@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instrua • Demo Web | Aléxia Mendes</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--bg:#090711;--panel:rgba(20,13,34,.78);--panel2:#171029;--pink:#ff55ca;--violet:#9d62ff;--blue:#69a5ff;--text:#fbf8ff;--muted:#cfc5dc;--line:rgba(255,255,255,.12);--ok:#68e0a6}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(circle at 80% 0,#34105b 0,#0d0715 34%,#06050b 100%);color:var(--text)}button{font:inherit}a{color:inherit;text-decoration:none}.app{min-height:100vh;display:grid;grid-template-columns:250px 1fr}.side{position:sticky;top:0;height:100vh;padding:22px 16px;background:rgba(7,5,13,.86);border-right:1px solid var(--line);backdrop-filter:blur(18px)}.brand{display:flex;gap:10px;align-items:center;font-weight:800;font-size:1.15rem;margin-bottom:24px}.fox{width:34px;height:30px;background:linear-gradient(135deg,var(--pink),var(--violet));clip-path:polygon(0 12%,25% 23%,50% 0,75% 23%,100% 12%,87% 68%,66% 100%,50% 84%,34% 100%,13% 68%);filter:drop-shadow(0 0 12px rgba(255,85,202,.3))}.side-label{font-size:.7rem;letter-spacing:.15em;color:#8e8398;margin-bottom:8px}.nav{display:grid;gap:6px}.nav button,.nav a{border:1px solid transparent;background:transparent;color:#ddd4e7;text-align:left;padding:11px 12px;border-radius:11px;cursor:pointer}.nav button:hover,.nav button.active,.nav a:hover{background:rgba(255,85,202,.1);border-color:rgba(255,85,202,.18);color:#fff}.nav i{width:22px}.testbox{margin-top:22px;padding:13px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.035)}.testbox h4{margin:0 0 8px;font-size:.83rem}.testbox p{margin:0;color:#a99db5;font-size:.74rem;line-height:1.5}.role-switch{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}.role-switch button{padding:8px;border-radius:9px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#e8e0ed;cursor:pointer;font-size:.76rem}.role-switch button.active{background:linear-gradient(90deg,rgba(255,85,202,.22),rgba(157,98,255,.22));border-color:rgba(255,85,202,.45)}.main{padding:28px;max-width:1320px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;gap:18px;align-items:center}.back{color:#c9bed4}.status{font-size:.75rem;color:#a89bad}.hero{margin:28px 0}.eyebrow{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border:1px solid rgba(255,85,202,.25);border-radius:999px;background:rgba(255,85,202,.08);color:#ff9cdd;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.hero h1{font-size:clamp(2.2rem,5vw,4.4rem);line-height:1.03;margin:12px 0 10px}.hero h1 span{background:linear-gradient(90deg,#fff,var(--pink),#ae91ff);-webkit-background-clip:text;color:transparent}.hero p{max-width:840px;color:var(--muted);font-size:1.02rem;margin:0}.toolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin:22px 0}.chips{display:flex;gap:7px;flex-wrap:wrap}.chip{border:1px solid var(--line);background:rgba(255,255,255,.045);color:#ded5e8;padding:8px 11px;border-radius:999px;cursor:pointer;font-size:.76rem}.chip.active,.chip:hover{border-color:rgba(255,85,202,.45);background:rgba(255,85,202,.1)}.content{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 20px 55px rgba(0,0,0,.22)}.panel-head{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;align-items:center}.panel-head h2{font-size:1.05rem;margin:0}.pill{padding:5px 9px;border-radius:999px;font-size:.7rem;color:#9df0c3;background:rgba(104,224,166,.08);border:1px solid rgba(104,224,166,.26)}.panel-body{padding:18px}.view{display:none}.view.active{display:block}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{padding:13px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.035)}.stat b{font-size:1.25rem;display:block}.stat span{color:#a99db6;font-size:.72rem}.table{margin-top:15px;display:grid;gap:8px}.row{display:grid;grid-template-columns:1.2fr 1fr .75fr .65fr;gap:8px;align-items:center;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.025);font-size:.76rem}.row.head{color:#a99eb0;background:transparent;border:0}.badge{justify-self:start;padding:5px 8px;border-radius:999px;font-size:.66rem;border:1px solid rgba(105,165,255,.28);background:rgba(105,165,255,.08);color:#a6c9ff}.badge.ok{border-color:rgba(104,224,166,.28);background:rgba(104,224,166,.08);color:#9df0c3}.actions{display:flex;gap:7px;flex-wrap:wrap}.btn{border:1px solid rgba(255,85,202,.32);background:linear-gradient(90deg,rgba(255,85,202,.2),rgba(157,98,255,.22));color:#fff;padding:8px 11px;border-radius:9px;cursor:pointer}.btn.secondary{background:transparent;border-color:var(--line)}.btn:hover{transform:translateY(-1px)}.patient{display:grid;grid-template-columns:80px 1fr;gap:15px;align-items:center;padding:14px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.03)}.avatar{width:66px;height:66px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,var(--pink),var(--violet));font-weight:800;font-size:1.2rem}.patient small{color:#a99db6}.timeline{display:grid;gap:10px;margin-top:14px}.event{padding:12px;border-left:3px solid var(--pink);background:rgba(255,255,255,.03);border-radius:0 12px 12px 0}.event b{display:block}.event small{color:#a99db6}.instructions{display:grid;gap:10px}.instruction{padding:14px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.03)}.instruction h4{margin:0 0 5px}.instruction p{margin:0;color:#b8adbf;font-size:.78rem;line-height:1.5}.media{margin-top:9px;display:flex;gap:7px;flex-wrap:wrap}.media span{font-size:.68rem;padding:5px 8px;border-radius:7px;background:rgba(255,255,255,.05);border:1px solid var(--line)}.right-card{padding:18px}.right-title{display:flex;justify-content:space-between;align-items:center;gap:10px}.right-title h3{margin:0;font-size:1rem}.muted{color:#a99db6;font-size:.78rem}.switcher{display:flex;gap:7px;margin:14px 0}.switcher button{flex:1;padding:9px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.035);color:#e4dbea;cursor:pointer}.switcher button.active{background:linear-gradient(90deg,rgba(255,85,202,.2),rgba(157,98,255,.22));border-color:rgba(255,85,202,.4)}.phone{background:linear-gradient(145deg,#faf7ff,#ede7f7);color:#2e1b3c;border-radius:28px;padding:10px;max-width:360px;margin:0 auto;box-shadow:0 20px 50px rgba(0,0,0,.3);border:5px solid #25202d}.phonebar{font-size:.72rem;padding:10px 12px;color:#725d84;display:flex;justify-content:space-between}.phonehero{padding:18px 14px 8px}.phonehero p{margin:4px 0;color:#795f88;font-size:.78rem}.phonecard{padding:14px;border-radius:17px;background:#fff;border:1px solid #e4d8ea;margin-top:10px}.phonecard b{display:block}.phonecard small{display:block;color:#765f80;margin:4px 0}.phonebtn{border:0;background:linear-gradient(90deg,#ff55ca,#9d62ff);color:#fff;border-radius:11px;padding:10px 12px;width:100%;margin-top:8px;cursor:pointer;font-weight:700}.phonebtn.ok{background:linear-gradient(90deg,#37b67f,#58dba4)}.mini-nav{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin-top:10px}.mini-nav button{border:0;background:#f3ebf7;color:#7c6984;border-radius:8px;padding:7px 4px;font-size:.6rem;cursor:pointer}.mini-nav button.active{background:#e9d7f3;color:#5f3975;font-weight:700}.toast{margin-top:10px;min-height:20px;font-size:.72rem;color:#8d2b69}.side-note{margin-top:14px;padding:11px;border-radius:12px;background:rgba(105,165,255,.06);border:1px solid rgba(105,165,255,.15);color:#aebbd0;font-size:.7rem;line-height:1.45}.hidden{display:none!important}@media(max-width:1000px){.app{grid-template-columns:1fr}.side{position:relative;height:auto}.content{grid-template-columns:1fr}.main{padding:20px 15px}}@media(max-width:620px){.cards{grid-template-columns:1fr}.row{grid-template-columns:1fr 1fr}.row.head{display:none}.top{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side">
+<div class="brand"><div class="fox"></div><span>Instrua</span></div>
+<div class="side-label">DEMO WEB</div>
+<nav class="nav">
+<button class="active" data-view="inicio"><i class="fa-solid fa-house"></i> Início</button>
+<button data-view="agenda"><i class="fa-solid fa-calendar-days"></i> Agenda</button>
+<button data-view="pacientes"><i class="fa-solid fa-users"></i> Pacientes</button>
+<button data-view="instrucoes"><i class="fa-solid fa-file-lines"></i> Instruções</button>
+<button data-view="confirmacoes"><i class="fa-solid fa-check"></i> Confirmações</button>
+<button data-view="config"><i class="fa-solid fa-gear"></i> Configurações</button>
+</nav>
+<div class="testbox">
+<h4>Modo de teste</h4>
+<p>Alterne entre a experiência da equipe da clínica e a experiência do paciente.</p>
+<div class="role-switch"><button class="active" data-role="clinic">Clínica</button><button data-role="patient">Paciente</button></div>
+</div>
+<a class="nav" href="https://github.com/alexia-dev/Instrua" target="_blank" style="margin-top:10px"><span style="display:block;padding:11px 12px"><i class="fa-brands fa-github"></i> GitHub do projeto</span></a>
+</aside>
+<main class="main">
+<div class="top"><a class="back" href="projetos.html#projetos">← Voltar à Central de Demos</a><div class="status">Ambiente demonstrativo • dados fictícios</div></div>
+<section class="hero">
+<div class="eyebrow"><i class="fa-solid fa-flask"></i> Projeto em desenvolvimento</div>
+<h1>🦊 <span>Instrua</span> — Demo Web</h1>
+<p>Uma simulação navegável do produto para mostrar como clínica/equipe e paciente interagem com agenda, confirmação e instruções. Nada aqui acessa dados reais.</p>
+</section>
+<div class="toolbar"><div class="chips"><button class="chip active" data-view="inicio">Visão geral</button><button class="chip" data-view="agenda">Agenda</button><button class="chip" data-view="pacientes">Pacientes</button><button class="chip" data-view="instrucoes">Instruções</button><button class="chip" data-view="confirmacoes">Confirmações</button></div><div class="muted" id="modeLabel">Modo: Clínica / Equipe</div></div>
+
+<section class="content">
+<div class="panel">
+<div class="panel-head"><h2 id="panelTitle">Visão geral da clínica</h2><span class="pill">DEMO ATIVA</span></div>
+<div class="panel-body">
+<div id="view-inicio" class="view active">
+<div class="cards"><div class="stat"><b>24</b><span>Agendamentos hoje</span></div><div class="stat"><b>17</b><span>Confirmações</span></div><div class="stat"><b>06</b><span>Instruções enviadas</span></div></div>
+<div class="table">
+<div class="row head"><span>Paciente</span><span>Procedimento</span><span>Horário</span><span>Status</span></div>
+<div class="row"><b>Mariana Alves</b><span>Colonoscopia</span><span>08:30</span><span class="badge ok">Confirmado</span></div>
+<div class="row"><b>João Victor</b><span>Consulta</span><span>10:00</span><span class="badge">Aguardando</span></div>
+<div class="row"><b>Camila Souza</b><span>Endoscopia</span><span>13:30</span><span class="badge ok">Confirmado</span></div>
+</div>
+<div class="side-note">💡 Nesta demo, as ações são simuladas no navegador para que o visitante consiga testar o fluxo sem backend.</div>
+</div>
+
+<div id="view-agenda" class="view">
+<div class="cards"><div class="stat"><b>08:30</b><span>Mariana • Colonoscopia</span></div><div class="stat"><b>10:00</b><span>João • Consulta</span></div><div class="stat"><b>13:30</b><span>Camila • Endoscopia</span></div></div>
+<div class="timeline">
+<div class="event"><b>08:30 — Mariana Alves</b><small>Colonoscopia • Instruções enviadas • confirmação recebida</small></div>
+<div class="event"><b>10:00 — João Victor</b><small>Consulta • lembrete pendente • confirmação aguardando</small></div>
+<div class="event"><b>13:30 — Camila Souza</b><small>Endoscopia • preparo atualizado • confirmação recebida</small></div>
+</div>
+<div class="actions" style="margin-top:14px"><button class="btn" onclick="notify('Novo agendamento criado na demonstração.')">+ Novo agendamento</button><button class="btn secondary" onclick="notify('Agenda filtrada por hoje.')">Filtrar hoje</button></div>
+</div>
+
+<div id="view-pacientes" class="view">
+<div class="patient"><div class="avatar">MA</div><div><b>Mariana Alves</b><small> • ID IN-0248</small><div class="muted">Colonoscopia • 15/10/2026 às 08:30</div></div></div>
+<div class="timeline">
+<div class="event"><b>Identidade verificada</b><small>Cadastro e validação demonstrativa concluídos.</small></div>
+<div class="event"><b>Instruções enviadas</b><small>Preparo + orientações do dia do exame.</small></div>
+<div class="event"><b>Presença confirmada</b><small>Confirmação registrada pelo paciente.</small></div>
+</div>
+<div class="actions" style="margin-top:14px"><button class="btn" onclick="notify('Perfil da paciente aberto.')">Abrir prontuário demonstrativo</button><button class="btn secondary" onclick="notify('Nova instrução preparada para envio.')">Enviar instrução</button></div>
+</div>
+
+<div id="view-instrucoes" class="view">
+<div class="instructions">
+<div class="instruction"><h4>Preparo para colonoscopia</h4><p>Checklist de preparo com horários, hidratação, alimentação e orientações gerais. Conteúdo fictício de demonstração.</p><div class="media"><span>🖼 Foto</span><span>▶ Vídeo</span><span>✓ Checklist</span></div></div>
+<div class="instruction"><h4>Orientações do dia</h4><p>Documentos, chegada antecipada e confirmação final. Uma mesma instrução pode ser atualizada sem reconstruir o fluxo.</p><div class="media"><span>📝 Texto</span><span>🔔 Notificação</span></div></div>
+</div>
+<div class="actions" style="margin-top:14px"><button class="btn" onclick="notify('Instrução marcada como enviada.')">Enviar agora</button><button class="btn secondary" onclick="notify('Editor demonstrativo aberto.')">Editar instrução</button></div>
+</div>
+
+<div id="view-confirmacoes" class="view">
+<div class="cards"><div class="stat"><b>17</b><span>Confirmadas</span></div><div class="stat"><b>05</b><span>Aguardando</span></div><div class="stat"><b>02</b><span>Sem resposta</span></div></div>
+<div class="table">
+<div class="row head"><span>Paciente</span><span>Evento</span><span>Canal</span><span>Status</span></div>
+<div class="row"><b>Mariana Alves</b><span>Colonoscopia</span><span>WhatsApp</span><span class="badge ok">Confirmado</span></div>
+<div class="row"><b>João Victor</b><span>Consulta</span><span>SMS</span><span class="badge">Aguardando</span></div>
+<div class="row"><b>Camila Souza</b><span>Endoscopia</span><span>E-mail</span><span class="badge ok">Confirmado</span></div>
+</div>
+<div class="actions" style="margin-top:14px"><button class="btn" onclick="notify('Lembrete reenviado na demonstração.')">Reenviar lembrete</button><button class="btn secondary" onclick="notify('Filtro: somente pendentes.')">Ver pendentes</button></div>
+</div>
+
+<div id="view-config" class="view">
+<div class="instruction"><h4>Configurações da clínica</h4><p>Perfil da clínica, canais de notificação, modelos de instrução, permissões da equipe e preferências de confirmação.</p></div>
+<div class="instructions" style="margin-top:10px"><div class="instruction"><h4>🔒 Segurança</h4><p>Demo sem dados reais. No produto real: autenticação, controle de acesso, proteção de dados e conformidade com LGPD.</p></div><div class="instruction"><h4>🧩 Personalização</h4><p>Modelos de mensagem e instruções podem ser adaptados por procedimento e atualizados pela equipe.</p></div></div>
+<div class="actions" style="margin-top:14px"><button class="btn" onclick="notify('Preferências salvas na demonstração.')">Salvar alterações</button></div>
+</div>
+</div>
+</div>
+
+<aside class="panel right-card">
+<div class="right-title"><h3 id="mobileTitle">Experiência do paciente</h3><span class="muted">preview</span></div>
+<div class="switcher"><button class="active" data-role="clinic">Clínica</button><button data-role="patient">Paciente</button></div>
+<div id="previewClinic">
+<div class="patient" style="margin-bottom:12px"><div class="avatar">CL</div><div><b>Equipe da clínica</b><small> • painel operacional</small><div class="muted">Agenda, pacientes e confirmações</div></div></div>
+<div class="timeline"><div class="event"><b>✓ 17 confirmações</b><small>Fluxo acompanhado pela equipe.</small></div><div class="event"><b>📋 06 instruções</b><small>Conteúdo pronto para os próximos pacientes.</small></div></div>
+</div>
+<div id="previewPatient" class="hidden">
+<div class="phone">
+<div class="phonebar"><span>09:41</span><span>Instrua 🦊</span></div>
+<div class="phonehero"><b>Olá, Mariana 👋</b><p>Seu próximo exame está confirmado.</p></div>
+<div class="phonecard"><b>Colonoscopia</b><small>15/10/2026 • 08:30</small><small>Clínica Vulpéa</small><button class="phonebtn" id="confirmBtn" onclick="confirmPatient()">Confirmar presença</button><div class="toast" id="patientToast"></div></div>
+<div class="phonecard"><b>Instruções</b><small>Seu preparo está disponível.</small><div class="actions"><button class="phonebtn" style="width:auto" onclick="notify('Checklist de preparo aberto na demonstração.')">Ver instruções</button></div></div>
+<div class="mini-nav"><button class="active">🏠</button><button onclick="notify('Agenda do paciente aberta.')">📅</button><button onclick="notify('Instruções abertas.')">📋</button><button onclick="notify('Confirmações abertas.')">✓</button><button onclick="notify('Perfil aberto.')">👤</button></div>
+</div>
+</div>
+</aside>
+</section>
+</main>
+</div>
+<script>
+const views={inicio:'Visão geral da clínica',agenda:'Agenda',pacientes:'Pacientes',instrucoes:'Instruções',confirmacoes:'Confirmações',config:'Configurações'};
+const panelTitle=document.getElementById('panelTitle'),modeLabel=document.getElementById('modeLabel'),mobileTitle=document.getElementById('mobileTitle');
+function setView(v){document.querySelectorAll('.view').forEach(x=>x.classList.remove('active'));const el=document.getElementById('view-'+v);if(el)el.classList.add('active');document.querySelectorAll('[data-view]').forEach(x=>x.classList.toggle('active',x.dataset.view===v));panelTitle.textContent=views[v]||'Visão geral';if(location.hash!=='#'+v)history.replaceState(null,'','#'+v)}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
+function setRole(role){const patient=role==='patient';document.querySelectorAll('[data-role]').forEach(x=>x.classList.toggle('active',x.dataset.role===role));document.getElementById('previewClinic').classList.toggle('hidden',patient);document.getElementById('previewPatient').classList.toggle('hidden',!patient);modeLabel.textContent=patient?'Modo: Paciente':'Modo: Clínica / Equipe';mobileTitle.textContent=patient?'Experiência do paciente':'Visão da equipe da clínica'}
+document.querySelectorAll('[data-role]').forEach(b=>b.addEventListener('click',()=>setRole(b.dataset.role)));
+function notify(msg){const el=document.querySelector('.status');el.textContent=msg;setTimeout(()=>el.textContent='Ambiente demonstrativo • dados fictícios',2400)}
+function confirmPatient(){const b=document.getElementById('confirmBtn');b.classList.add('ok');b.textContent='Presença confirmada ✓';b.disabled=true;document.getElementById('patientToast').textContent='Confirmação registrada nesta demonstração.'}
+const start=location.hash.slice(1);if(views[start])setView(start);
+</script>
+</body>
+</html>
