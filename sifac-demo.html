@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SIFAC • Demo Web | Aléxia Mendes</title>
+<title>NEXA • Demo Web | Aléxia Mendes</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 :root{--bg:#07101b;--panel:rgba(11,25,39,.86);--panel2:#102235;--blue:#4f9cff;--cyan:#63d8ff;--green:#65d9a0;--text:#f5f9ff;--muted:#aebdcd;--line:rgba(255,255,255,.11);--danger:#ff7187}
@@ -13,7 +13,7 @@
 <body>
 <div class="app">
 <aside class="side">
-<div class="brand"><div class="mark"><i class="fa-solid fa-chart-column"></i></div><span>SIFAC</span></div>
+<div class="brand"><div class="mark"><i class="fa-solid fa-chart-column"></i></div><span>NEXA</span></div>
 <div class="side-label">DEMO WEB</div>
 <nav class="nav">
 <button class="active" data-view="dashboard"><i class="fa-solid fa-gauge-high"></i> Dashboard</button>
@@ -23,18 +23,18 @@
 <button data-view="config"><i class="fa-solid fa-gear"></i> Configurações</button>
 </nav>
 <div class="info-box"><b>Projeto original</b><p>Python + KivyMD + Pandas + Openpyxl. A demo web reproduz o fluxo para apresentação, sem gerar arquivos reais.</p></div>
-<a class="nav" href="https://github.com/alexia-dev/INTERFACE" target="_blank" style="margin-top:10px"><span style="display:block;padding:11px 12px"><i class="fa-brands fa-github"></i> GitHub do SIFAC</span></a>
+<a class="nav" href="https://github.com/alexia-dev/INTERFACE" target="_blank" style="margin-top:10px"><span style="display:block;padding:11px 12px"><i class="fa-brands fa-github"></i> GitHub do NEXA</span></a>
 </aside>
 <main class="main">
 <div class="top"><a class="back" href="projetos.html#projetos">← Voltar à Central de Demos</a><div class="status" id="status">Ambiente demonstrativo • dados fictícios</div></div>
-<section class="hero"><div class="eyebrow"><i class="fa-solid fa-flask"></i> Projeto em desenvolvimento</div><h1>📊 <span>SIFAC</span> — Demo Web</h1><p>Uma simulação navegável do Sistema de Gestão de Relatórios: escolha o tipo de relatório, defina o período, gere a demonstração e consulte o histórico.</p></section>
+<section class="hero"><div class="eyebrow"><i class="fa-solid fa-flask"></i> Projeto em desenvolvimento</div><h1>📊 <span>NEXA</span> — Demo Web</h1><p>Uma simulação navegável do Nexa Bill: escolha o tipo de relatório, defina o período, gere a demonstração e consulte o histórico.</p></section>
 <section class="content">
 <div class="panel">
 <div class="panel-head"><h2 id="title">Dashboard</h2><span class="pill">DEMO ATIVA</span></div>
 <div class="body">
 <div id="view-dashboard" class="view active">
 <div class="stats"><div class="stat"><b>128</b><span>Relatórios gerados</span></div><div class="stat"><b>R$ 84,2k</b><span>Processado</span></div><div class="stat"><b>96%</b><span>Conferência</span></div><div class="stat"><b>03</b><span>Tipos disponíveis</span></div></div>
-<div class="report-card"><h3>Fluxo do SIFAC</h3><p>Selecionar tipo → definir período → processar dados → gerar Excel → registrar no histórico.</p><div class="chart"><div class="bar" style="height:42%"></div><div class="bar" style="height:67%"></div><div class="bar" style="height:54%"></div><div class="bar" style="height:82%"></div><div class="bar" style="height:72%"></div><div class="bar" style="height:94%"></div><div class="bar" style="height:78%"></div></div></div>
+<div class="report-card"><h3>Fluxo do NEXA</h3><p>Selecionar tipo → definir período → processar dados → gerar Excel → registrar no histórico.</p><div class="chart"><div class="bar" style="height:42%"></div><div class="bar" style="height:67%"></div><div class="bar" style="height:54%"></div><div class="bar" style="height:82%"></div><div class="bar" style="height:72%"></div><div class="bar" style="height:94%"></div><div class="bar" style="height:78%"></div></div></div>
 </div>
 <div id="view-relatorios" class="view">
 <div class="toolbar"><button class="chip active" data-report="Financeiro">💰 Financeiro</button><button class="chip" data-report="Comercial">📈 Comercial</button><button class="chip" data-report="Cobrança">📋 Cobrança</button></div>
@@ -50,8 +50,8 @@
 </div>
 </div>
 <aside class="panel right">
-<h3>Prévia da aplicação</h3><p>Representação visual inspirada na interface desktop original do SIFAC.</p>
-<div class="mock"><div class="mock-top"><span><i class="fa-solid fa-bars"></i> SIFAC</span><span>Relatórios</span></div><div class="mock-body"><div class="mock-side"><span class="on">Dashboard</span><span>Financeiro</span><span>Comercial</span><span>Cobrança</span><span>Histórico</span><span>Ajuda</span></div><div class="mock-content"><h4>Gerar relatório</h4><div class="mini-stats"><div><b>128</b><small>Gerados</small></div><div><b>03</b><small>Tipos</small></div><div><b>96%</b><small>Conferido</small></div></div><div class="mock-card"><b>Tipo de relatório</b><small id="mockReport">Financeiro</small><button class="mock-button" onclick="setView('relatorios')">Selecionar</button></div><div class="mock-card"><b>Período</b><small>01/10/2026 → 15/10/2026</small><button class="mock-button" onclick="setView('periodo')">Alterar período</button></div><div class="mock-card"><b>Saída</b><small>Arquivo Excel (.xlsx)</small><button class="mock-button" onclick="generateReport()">Gerar Excel</button></div></div></div></div>
+<h3>Prévia da aplicação</h3><p>Representação visual inspirada na interface desktop original do NEXA.</p>
+<div class="mock"><div class="mock-top"><span><i class="fa-solid fa-bars"></i> NEXA</span><span>Relatórios</span></div><div class="mock-body"><div class="mock-side"><span class="on">Dashboard</span><span>Financeiro</span><span>Comercial</span><span>Cobrança</span><span>Histórico</span><span>Ajuda</span></div><div class="mock-content"><h4>Gerar relatório</h4><div class="mini-stats"><div><b>128</b><small>Gerados</small></div><div><b>03</b><small>Tipos</small></div><div><b>96%</b><small>Conferido</small></div></div><div class="mock-card"><b>Tipo de relatório</b><small id="mockReport">Financeiro</small><button class="mock-button" onclick="setView('relatorios')">Selecionar</button></div><div class="mock-card"><b>Período</b><small>01/10/2026 → 15/10/2026</small><button class="mock-button" onclick="setView('periodo')">Alterar período</button></div><div class="mock-card"><b>Saída</b><small>Arquivo Excel (.xlsx)</small><button class="mock-button" onclick="generateReport()">Gerar Excel</button></div></div></div></div>
 <div class="notice">⚠️ Esta página não cria nem baixa um Excel real. Ela demonstra o fluxo e a interface do projeto para visitantes do portfólio.</div>
 </aside>
 </section>
