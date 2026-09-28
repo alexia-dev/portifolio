@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NEXA • Demo Web | Aléxia Mendes</title>
+<title>Nexa Bill • Demo Web | Aléxia Mendes</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 :root{--bg:#07101b;--panel:rgba(11,25,39,.86);--panel2:#102235;--blue:#4f9cff;--cyan:#63d8ff;--green:#65d9a0;--text:#f5f9ff;--muted:#aebdcd;--line:rgba(255,255,255,.11);--danger:#ff7187}
@@ -13,7 +13,7 @@
 <body>
 <div class="app">
 <aside class="side">
-<div class="brand"><div class="mark"><i class="fa-solid fa-chart-column"></i></div><span>NEXA</span></div>
+<div class="brand"><div class="mark"><i class="fa-solid fa-chart-column"></i></div><span>Nexa Bill</span></div>
 <div class="side-label">DEMO WEB</div>
 <nav class="nav">
 <button class="active" data-view="dashboard"><i class="fa-solid fa-gauge-high"></i> Dashboard</button>
@@ -22,12 +22,12 @@
 <button data-view="historico"><i class="fa-solid fa-clock-rotate-left"></i> Histórico</button>
 <button data-view="config"><i class="fa-solid fa-gear"></i> Configurações</button>
 </nav>
-<div class="info-box"><b>Projeto original</b><p>Python + KivyMD + Pandas + Openpyxl. A demo web reproduz o fluxo para apresentação, sem gerar arquivos reais.</p></div>
+<div class="info-box"><b>Módulo Nexa Bill</b><p>Python + KivyMD + Pandas + Openpyxl. A demo web reproduz o fluxo para apresentação, sem gerar arquivos reais.</p></div>
 <a class="nav" href="https://github.com/alexia-dev/INTERFACE" target="_blank" style="margin-top:10px"><span style="display:block;padding:11px 12px"><i class="fa-brands fa-github"></i> GitHub do NEXA</span></a>
 </aside>
 <main class="main">
 <div class="top"><a class="back" href="projetos.html#projetos">← Voltar à Central de Demos</a><div class="status" id="status">Ambiente demonstrativo • dados fictícios</div></div>
-<section class="hero"><div class="eyebrow"><i class="fa-solid fa-flask"></i> Projeto em desenvolvimento</div><h1>📊 <span>NEXA</span> — Demo Web</h1><p>Uma simulação navegável do Nexa Bill: escolha o tipo de relatório, defina o período, gere a demonstração e consulte o histórico.</p></section>
+<section class="hero"><div class="eyebrow"><i class="fa-solid fa-flask"></i> Projeto em desenvolvimento</div><h1>📊 <span>Nexa Bill</span> — Demo Web</h1><p>Uma simulação navegável do Nexa Bill: escolha o tipo de relatório, defina o período, gere a demonstração e consulte o histórico.</p></section>
 <section class="content">
 <div class="panel">
 <div class="panel-head"><h2 id="title">Dashboard</h2><span class="pill">DEMO ATIVA</span></div>
@@ -50,7 +50,7 @@
 </div>
 </div>
 <aside class="panel right">
-<h3>Prévia da aplicação</h3><p>Representação visual inspirada na interface desktop original do NEXA.</p>
+<h3>Prévia da aplicação</h3><p>Representação visual inspirada na interface desktop original do Nexa Bill.</p>
 <div class="mock"><div class="mock-top"><span><i class="fa-solid fa-bars"></i> NEXA</span><span>Relatórios</span></div><div class="mock-body"><div class="mock-side"><span class="on">Dashboard</span><span>Financeiro</span><span>Comercial</span><span>Cobrança</span><span>Histórico</span><span>Ajuda</span></div><div class="mock-content"><h4>Gerar relatório</h4><div class="mini-stats"><div><b>128</b><small>Gerados</small></div><div><b>03</b><small>Tipos</small></div><div><b>96%</b><small>Conferido</small></div></div><div class="mock-card"><b>Tipo de relatório</b><small id="mockReport">Financeiro</small><button class="mock-button" onclick="setView('relatorios')">Selecionar</button></div><div class="mock-card"><b>Período</b><small>01/10/2026 → 15/10/2026</small><button class="mock-button" onclick="setView('periodo')">Alterar período</button></div><div class="mock-card"><b>Saída</b><small>Arquivo Excel (.xlsx)</small><button class="mock-button" onclick="generateReport()">Gerar Excel</button></div></div></div></div>
 <div class="notice">⚠️ Esta página não cria nem baixa um Excel real. Ela demonstra o fluxo e a interface do projeto para visitantes do portfólio.</div>
 </aside>
