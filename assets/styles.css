@@ -39,3 +39,13 @@ body.dark-theme{--cream:#201719;--paper:#2c2022;--ink:#fff0e9;--muted:#d1b9b1;--
 @media(max-width:700px){.section.soft .container{grid-template-columns:1fr!important}.section.soft .cards{grid-template-columns:repeat(2,1fr)!important}.nav-tools .theme-toggle{display:none}}
 
 .theme-toggle{display:grid;place-items:center;border:0;background:#f3e4dd;color:#421d20;font-size:1.2rem;cursor:pointer}.mobile-menu{display:none}@media(max-width:700px){.mobile-menu{display:block}.theme-toggle{display:grid}}
+
+
+/* Hero portrait: avoid enlargement and preserve natural detail */
+.hero .portrait-wrap{position:relative;min-height:510px;isolation:isolate}
+.hero .portrait-wrap:before{content:"";position:absolute;z-index:-1;inset:8% 3% 5% 12%;border-radius:48% 48% 28px 28px;background:linear-gradient(145deg,#efd8cc,#fff2e9 55%,#e6c5b7);box-shadow:0 28px 65px rgba(82,29,30,.12)}
+.hero .portrait-frame{width:min(100%,500px);height:510px;margin:0 auto;border-radius:48% 48% 26px 26px;padding:9px;background:linear-gradient(145deg,#f2d9cf,#fff8f2);overflow:hidden;box-shadow:0 20px 60px rgba(82,29,30,.16)}
+.hero .portrait-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 22%;border-radius:inherit;image-rendering:auto;transform:none;filter:none}
+.hero .portrait-note{left:2%;bottom:54px;box-shadow:0 12px 30px rgba(82,29,30,.14);border:1px solid #efd9d0}
+@media(min-width:1200px){.hero-grid{grid-template-columns:.92fr 1.08fr;gap:28px}.hero .portrait-frame{width:min(100%,480px);height:500px}}
+@media(max-width:700px){.hero .portrait-wrap{min-height:330px}.hero .portrait-frame{height:330px;width:min(100%,340px)}}
