@@ -67,5 +67,5 @@ function generateReport(){const s=document.getElementById('start').value,e=docum
 function validatePeriod(){const inputs=document.querySelectorAll('#view-periodo input');const s=inputs[0].value,e=inputs[1].value;document.getElementById('periodResult').textContent=s&&e&&s<=e?'✓ Período válido para processamento.':'⚠️ Confira as datas selecionadas.'}
 function notify(msg){document.getElementById('status').textContent=msg;setTimeout(()=>document.getElementById('status').textContent='Ambiente demonstrativo • dados fictícios',2500)}
 </script>
-</body>
+<div id="google_translate_element" style="position:fixed;top:12px;right:14px;z-index:99999;background:#fffdfb;padding:7px 10px;border:1px solid #eaded6;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.12)"></div><script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'pt',autoDisplay:false},'google_translate_element');}</script><script defer src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></body>
 </html>
